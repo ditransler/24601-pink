@@ -58,7 +58,8 @@
         <form class="contest__form"
               id="contest-form" name="contest-form"
               action="https://echo.htmlacademy.ru/" method="post" accept-charset="UTF-8">
-          <fieldset class="contest__fullname">
+          <div class="contest__fullname">
+            <fieldset class="contest__container">
               <legend class="contest__form-legend">ФИО участника</legend> <!-- accessibly hidden -->
               <div class="contest__form-group">
                 <label class="contest__form-label label" for="participant-last-name">Фамилия:</label>
@@ -75,98 +76,107 @@
                 <input class="contest__form-input input" id="participant-middle-name"
                        name="middle-name" type="text" placeholder="Ну и отчество тоже">
               </div>
-          </fieldset>
-          <fieldset class="contest__travel-achievements">
-            <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="contest__checkboxes-list">
-              <li class="contest__checkboxes-item">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="travel-achievement-1"
-                         name="travel-achievements[]" type="checkbox" value="1" checked>
-                  <label for="travel-achievement-1" class="checkbox__label">Сделал селфи с акулой</label>
-                </div>
-              </li>
-              <li class="contest__checkboxes-item">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="travel-achievement-2"
-                         name="travel-achievements[]" type="checkbox" value="2" checked>
-                  <label for="travel-achievement-2" class="checkbox__label">Обгорел на пляже</label>
-                </div>
-              </li>
-              <li class="contest__checkboxes-item">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="travel-achievement-3"
-                         name="travel-achievements[]" type="checkbox" value="3">
-                  <label for="travel-achievement-3" class="checkbox__label">Видел Чака Норриса</label>
-                </div>
-              </li>
-              <li class="contest__checkboxes-item">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="travel-achievement-4"
-                         name="travel-achievements[]" type="checkbox" value="4">
-                  <label for="travel-achievement-4" class="checkbox__label">Накупил сувениров</label>
-                </div>
-              </li>
-              <li class="contest__checkboxes-item">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="travel-achievement-5"
-                         name="travel-achievements[]" type="checkbox" value="5" checked>
-                  <label for="travel-achievement-5" class="checkbox__label">Удержал башню</label>
-                </div>
-              </li>
-              <li class="contest__checkboxes-item">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="travel-achievement-6"
-                         name="travel-achievements[]" type="checkbox" value="6">
-                  <label for="travel-achievement-6" class="checkbox__label">Разгромил отель</label>
-                </div>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="contest__contacts">
-            <legend class="contest__form-legend">Контакты участника</legend> <!-- accessibly hidden -->
-            <div class="contest__form-group">
-              <label class="contest__form-label label" for="participant-phone">Номер телефона:</label>
-              <input class="contest__form-input input" id="participant-phone"
-                     name="phone" type="tel" placeholder="Номер, пожалуйста">
-            </div>
-            <div class="contest__form-group">
-              <label class="contest__form-label label" for="participant-email">Адрес почты:</label>
-              <input class="contest__form-input input" id="participant-email"
-                     name="email" type="email" placeholder="Введите почту *" required>
-            </div>
-          </fieldset>
-          <fieldset class="contest__app-platform">
-            <legend class="contest__form-legend">С каким приложением путешествовал?</legend>
-            <ul class="contest__radios-list">
-              <li class="contest__radios-item">
-                <div class="radio">
-                  <input class="radio__input" id="applicant-app-platform-ios"
-                         name="applicant-app-platform" type="radio" value="ios" checked>
-                  <label class="radio__label" for="applicant-app-platform-ios">Pink для iOS</label>
-                </div>
-              </li>
-              <li class="contest__radios-item">
-                <div class="radio">
-                  <input class="radio__input" id="applicant-app-platform-android"
-                         name="applicant-app-platform" type="radio" value="android">
-                  <label class="radio__label" for="applicant-app-platform-android">Pink для iOS</label>
-                </div>
-              </li>
-              <li class="contest__radios-item">
-                <div class="radio">
-                  <input class="radio__input" id="applicant-app-platform-windows-phone"
-                         name="applicant-app-platform" type="radio" value="windows-phone">
-                  <label class="radio__label" for="applicant-app-platform-windows-phone">Pink для iOS</label>
-                </div>
-              </li>
-            </ul>
-          </fieldset>
+            </fieldset>
+          </div>
+          <div class="contest__travel-achievements">
+            <fieldset class="contest__container">
+              <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="contest__checkboxes-list">
+                <li class="contest__checkboxes-item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="travel-achievement-1"
+                           name="travel-achievements[]" type="checkbox" value="1" checked>
+                    <label for="travel-achievement-1" class="checkbox__label">Сделал селфи с акулой</label>
+                  </div>
+                </li>
+                <li class="contest__checkboxes-item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="travel-achievement-2"
+                           name="travel-achievements[]" type="checkbox" value="2" checked>
+                    <label for="travel-achievement-2" class="checkbox__label">Обгорел на пляже</label>
+                  </div>
+                </li>
+                <li class="contest__checkboxes-item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="travel-achievement-3"
+                           name="travel-achievements[]" type="checkbox" value="3">
+                    <label for="travel-achievement-3" class="checkbox__label">Видел Чака Норриса</label>
+                  </div>
+                </li>
+                <li class="contest__checkboxes-item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="travel-achievement-4"
+                           name="travel-achievements[]" type="checkbox" value="4">
+                    <label for="travel-achievement-4" class="checkbox__label">Накупил сувениров</label>
+                  </div>
+                </li>
+                <li class="contest__checkboxes-item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="travel-achievement-5"
+                           name="travel-achievements[]" type="checkbox" value="5" checked>
+                    <label for="travel-achievement-5" class="checkbox__label">Удержал башню</label>
+                  </div>
+                </li>
+                <li class="contest__checkboxes-item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="travel-achievement-6"
+                           name="travel-achievements[]" type="checkbox" value="6">
+                    <label for="travel-achievement-6" class="checkbox__label">Разгромил отель</label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="contest__contacts">
+            <fieldset class="contest__container">
+              <legend class="contest__form-legend">Контакты участника</legend> <!-- accessibly hidden -->
+              <div class="contest__form-group">
+                <label class="contest__form-label label" for="participant-phone">Номер телефона:</label>
+                <input class="contest__form-input input" id="participant-phone"
+                       name="phone" type="tel" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="contest__form-group">
+                <label class="contest__form-label label" for="participant-email">Адрес почты:</label>
+                <input class="contest__form-input input" id="participant-email"
+                       name="email" type="email" placeholder="Введите почту *" required>
+              </div>
+            </fieldset>
+          </div>
+          <div class="contest__app-platform">
+            <fieldset class="contest__container">
+              <legend class="contest__form-legend">С каким приложением путешествовал?</legend>
+              <ul class="contest__radios-list">
+                <li class="contest__radios-item">
+                  <div class="radio">
+                    <input class="radio__input" id="applicant-app-platform-ios"
+                           name="applicant-app-platform" type="radio" value="ios" checked>
+                    <label class="radio__label" for="applicant-app-platform-ios">Pink для iOS</label>
+                  </div>
+                </li>
+                <li class="contest__radios-item">
+                  <div class="radio">
+                    <input class="radio__input" id="applicant-app-platform-android"
+                           name="applicant-app-platform" type="radio" value="android">
+                    <label class="radio__label" for="applicant-app-platform-android">Pink для iOS</label>
+                  </div>
+                </li>
+                <li class="contest__radios-item">
+                  <div class="radio">
+                    <input class="radio__input" id="applicant-app-platform-windows-phone"
+                           name="applicant-app-platform" type="radio" value="windows-phone">
+                    <label class="radio__label" for="applicant-app-platform-windows-phone">Pink для iOS</label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <div class="contest__emotions">
-            <label for="applicant-emotions">Опишите свои эмоции</label>
-            <textarea class="textarea"
-                      id="applicant-emotions" name="applicant-emotions"
-                      cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <div class="contest__container">
+              <label for="applicant-emotions">Опишите свои эмоции</label>
+              <textarea class="textarea"
+                        id="applicant-emotions" name="applicant-emotions"
+                        cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
           </div>
           <button class="contest__submit btn" type="submit">Отправить форму</button>
           <p class="contest__required-note"><sup>*</sup> &mdash; Обязательные поля</p>
