@@ -47,6 +47,37 @@
           <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </div>
+      <section class="contest">
+        <header class="contest__header">
+          <div class="contest__container">
+            <h2 class="contest__title">Заполните заявку на участие в конкурсе</h2> <!-- accessibly hidden -->
+            <p class="contest__subtitle">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+              бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          </div>
+        </header>
+        <form class="contest__form"
+              id="contest-form" name="contest-form"
+              action="https://echo.htmlacademy.ru/" method="post" accept-charset="UTF-8">
+          <fieldset class="contest__fullname">
+              <legend class="contest__form-legend">ФИО участника</legend> <!-- accessibly hidden -->
+              <div class="contest__form-group">
+                <label class="contest__form-label label" for="participant-last-name">Фамилия:</label>
+                <input class="contest__form-input input" id="participant-last-name"
+                       name="last-name" type="text" placeholder="Укажите фамилию *" required>
+              </div>
+              <div class="contest__form-group">
+                <label class="contest__form-label label" for="participant-first-name">Имя:</label>
+                <input class="contest__form-input input" id="participant-first-name"
+                       name="first-name" type="text" placeholder="Укажите ваше имя *" required>
+              </div>
+              <div class="contest__form-group">
+                <label class="contest__form-label label" for="participant-middle-name">Отчество:</label>
+                <input class="contest__form-input input" id="participant-middle-name"
+                       name="middle-name" type="text" placeholder="Ну и отчество тоже">
+              </div>
+          </fieldset>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
