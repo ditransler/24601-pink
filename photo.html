@@ -172,6 +172,47 @@
           </ul>
         </div>
       </section>
+      <section class="photo-upload">
+        <header class="photo-upload__header">
+          <div class="photo-upload__container">
+            <h2 class="photo-upload__title">Загрузка своих фотографий</h2>
+            <p class="photo-upload__subtitle">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          </div>
+        </header>
+        <form class="photo-upload__form"
+              id="photo-upload-form"
+              name="photo-upload-form"
+              action="https://echo.htmlacademy.ru/"
+              method="post" enctype="multipart/form-data">
+          <div class="photo-upload__container">
+            <div class="photo-upload__preview">
+              <img src="http://placehold.it/280x374" width="280" height="374" alt="">
+            </div>
+            <div class="photo-upload__edit">
+              <div class="photo-upload__edit-controls">
+                <button class="photo-upload__edit-btn photo-upload__edit-btn--crop photo-upload__edit-btn--active"
+                        type="button">Обрезать</button>
+                <button class="photo-upload__edit-btn photo-upload__edit-btn--fill"
+                        type="button">Залить</button>
+                <button class="photo-upload__edit-btn photo-upload__edit-btn--contrast"
+                        type="button">Изменить контрастность</button>
+              </div>
+              <div class="photo-upload__edit-sliders">
+                  <div class="photo-upload__edit-slider range-slider">
+                    <div class="range-slider__scale">
+                      <div class="range-slider__bar"></div>
+                    </div>
+                    <div class="range-slider__handle"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="photo-upload__form-footer">
+              <button class="photo-upload__submit" type="submit">Запостить</button>
+              <button class="photo-upload__reset" type="reset" disabled>Отмена</button>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
