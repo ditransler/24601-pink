@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Фотографии пользователей Пинк</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__container">
+        <nav class="main-menu">
+          <div class="main-menu__header">
+            <a class="main-menu__logo main-logo" href="index.html" title="Вернуться на Главную">
+              <!-- img will be replaced with picture or inline SVG -->
+              <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+            </a>
+            <button class="main-menu__toggle" type="button" title="Открыть/закрыть меню">
+              <span>Открыть/закрыть меню</span>
+            </button>
+          </div>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link"
+                 href="index.html" title="Перейти на Главную">Главная</a>
+            </li>
+            <li class="main-menu__item main-menu__item--active">
+              <a class="main-menu__link">Фотографии</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link"
+                 href="form.html" title="Перейти к подаче заявки на участие в конкурсе">Конкурс</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link"
+                 href="https://htmlacademy.ru/intensive/adaptive"
+                 title="Перейти на сайт HTML Academy" target="_blank">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="intro">
+        <div class="intro__container">
+          <h1 class="intro__title">Фотографии пользователей</h1>
+        </div>
+      </div>
+      <section class="photos">
+        <div class="photos__container">
+          <header class="photos__header">
+            <h2 class="photos__title">Список фотографий</h2> <!-- accessibly hidden -->
+            <p class="photos__subtitle">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
+              ваших?</p>
+          </header>
+          <ul class="photos__list">
+            <li class="photos__item photos__item--panorama">
+              <span class="photos__item-label">Панорама дня</span>
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/320x137" width="320" height="137" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Анна</b>
+                  <time class="photos__item-time" datetime="2017-05-27T17:30">(5 минут назад)</time>
+                </p>
+                <p class="photos__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую
+                  трансляцию в перископе, задавайте свои вопросы!</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">215</span></span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/280x180" width="280" height="180" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Левон</b>
+                  <time class="photos__item-time" datetime="2017-05-27T12:30">(5 часов назад)</time>
+                </p>
+                <p class="photos__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">356</span></span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/280x180" width="280" height="180" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Антон</b>
+                  <time class="photos__item-time" datetime="2017-05-27T00:30">(12 часов назад)</time>
+                </p>
+                <p class="photos__comment">Соседи будут рады!</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">666</span></span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/280x180" width="280" height="180" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Борис</b>
+                  <time class="photos__item-time" datetime="2017-05-26T16:30">(20 часов назад)</time>
+                </p>
+                <p class="photos__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">215</span></span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/280x180" width="280" height="180" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Сергей</b>
+                  <time class="photos__item-time" datetime="2017-05-26T11:30">(25 часов назад)</time>
+                </p>
+                <p class="photos__comment">Самая кубанская в мире!</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">4</span></span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/280x180" width="280" height="180" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Максим</b>
+                  <time class="photos__item-time" datetime="2017-05-25T13:30">(40 часов назад)</time>
+                </p>
+                <p class="photos__comment">Где снег-то?</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">150</span></span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <a class="photos__thumb" href="#" title="Посмотреть оригинал изображения" target="_blank">
+                <img src="http://placehold.it/280x180" width="280" height="180" alt="">
+              </a>
+              <div class="photos__item-info">
+                <p class="photos__author">
+                  <b>Надежда</b>
+                  <time class="photos__item-time" datetime="2017-05-24T17:30">(45 часов назад)</time>
+                </p>
+                <p class="photos__comment">Всем GM и взаимные лайки!</p>
+                <div class="photos__likes">
+                  <button class="photos__likes-btn" title="Поставить лайк">Мне нравится</button>
+                  <span class="photos__likes-counter">Нравится: <span class="js-likes-counter">2560</span></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <a class="page-footer__logo main-logo" href="index.html" title="Вернуться на Главную">
+          <!-- img will be replaced with picture or inline SVG -->
+          <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+        </a>
+        <div class="page-footer__socials social-links">
+          <a class="social‐link  social‐link‐‐vk" href="#"
+             title="Мы вКонтакте" target="_blank">Vkontakte</a>
+          <a class="social‐link  social‐link‐‐fb" href="#"
+             title="Мы в Фейсбук" target="_blank">Facebook</a>
+          <a class="social‐link  social‐link‐‐yt" href="#"
+             title="Мы на Ютуб" target="_blank">Youtube</a>
+        </div>
+        <div class="page-footer__developers">
+          Разработано:
+          <a class="page-footer__developers-link" href="https://htmlacademy.ru/intensive/adaptive"
+             title="Продвинутый интенсив HTML Academy" target="_blank">
+            <img src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
