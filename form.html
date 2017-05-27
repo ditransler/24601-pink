@@ -123,6 +123,19 @@
               </li>
             </ul>
           </fieldset>
+          <fieldset class="contest__contacts">
+            <legend class="contest__form-legend">Контакты участника</legend> <!-- accessibly hidden -->
+            <div class="contest__form-group">
+              <label class="contest__form-label label" for="participant-phone">Номер телефона:</label>
+              <input class="contest__form-input input" id="participant-phone"
+                     name="phone" type="tel" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="contest__form-group">
+              <label class="contest__form-label label" for="participant-email">Адрес почты:</label>
+              <input class="contest__form-input input" id="participant-email"
+                     name="email" type="email" placeholder="Введите почту *" required>
+            </div>
+          </fieldset>
         </form>
       </section>
     </main>
