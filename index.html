@@ -152,27 +152,43 @@
           <div class="prices__slider-wrapper slider">
             <div class="prices__list-wrapper slider__wrapper">
               <div class="prices__list slider__inner">
-                <div class="prices__plan slider__item">
-                  <div class="prices__plan-header">
-                    <span class="prices__plan-label">Хит</span>
-                    <p class="prices__plan-title"><b>Стандарт</b></p>
-                    <span class="prices__plan-value">3,99 USD</span>
-                  </div>
-                  <ul class="prices__features-list">
-                    <li class="prices__feature">
-                      <span class="prices__feature-name">Розовый фильтр</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </li>
-                    <li class="prices__feature">
-                      <span class="prices__feature-name">Смайлики</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </li>
-                    <li class="prices__feature">
-                      <span class="prices__feature-name">Комментарии</span>
-                      <span class="prices__feature-support prices__feature-support--no"> - нет</span>
-                    </li>
-                  </ul>
-                </div>
+                <table class="prices__plan slider__item">
+                  <thead class="prices__plan-header">
+                    <tr class="prices__plan-row">
+                      <th class="prices__plan-cell" colspan="2">
+                        <span class="prices__plan-label">Хит</span>
+                        <p class="prices__plan-title"><b>Стандарт</b></p>
+                        <span class="prices__plan-value">3,99 USD</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="prices__plan-features">
+                    <tr class="prices__plan-row">
+                      <td class="prices__plan-cell">
+                        <span class="prices__feature-name">Розовый фильтр</span>
+                      </td>
+                      <td>
+                        <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                      </td>
+                    </tr>
+                    <tr class="prices__plan-row">
+                      <td class="prices__plan-cell">
+                        <span class="prices__feature-name">Смайлики</span>
+                      </td>
+                      <td>
+                        <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                      </td>
+                    </tr>
+                    <tr class="prices__plan-row">
+                      <td class="prices__plan-cell">
+                        <span class="prices__feature-name">Комментарии</span>
+                      </td>
+                      <td>
+                        <span class="prices__feature-support prices__feature-support--no"> - нет</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <ul class="prices__slider-bullets slider__bullets">
                 <li class="slider__bullet">
