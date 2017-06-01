@@ -22,6 +22,7 @@ gulp.task("style", function() {
 
 gulp.task("serve", ["style"], function() {
   server.init({
+    browser: "google chrome",
     server: ".",
     notify: false,
     open: true,
