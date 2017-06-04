@@ -1,3 +1,20 @@
 .photo-upload {
   background-color: $secondary-bg-color;
 }
+
+.photo-upload__subtitle {
+  line-height: 2.14285714;
+}
+
+.photo-upload__submit {
+  color: $brand-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.photo-upload__reset {
+  color: rgba($main-dark-color, 0.1);
+  font-size: 18px;
+  font-weight: 700;
+}
