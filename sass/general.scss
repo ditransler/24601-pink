@@ -14,4 +14,9 @@ html, body {
 
 body {
   background-color: #fff;
+  color: $main-dark-color;
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: $base-line-height;
 }
