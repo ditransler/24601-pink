@@ -1,7 +1,33 @@
+.contest__subtitle {
+  line-height: 2.14285714;
+}
+
+.contest__form-legend {
+  color: $brand-color;
+  font-size: 14px;
+  line-height: 1.28571429;
+  text-transform: uppercase;
+}
+
+.contest__form-label {
+  color: $brand-color;
+  font-size: 14px;
+  line-height: 2.14285714;
+  text-transform: uppercase;
+}
+
 .contest__travel-achievements {
   background-color: $secondary-bg-color;
 }
 
 .contest__app-platform {
   background-color: $secondary-bg-color;
+}
+
+.contest__required-note {
+  text-transform: uppercase;
+
+  sup {
+    color: $brand-color;
+  }
 }
