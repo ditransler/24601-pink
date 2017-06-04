@@ -1,3 +1,35 @@
- .prices {
-   background-color: $secondary-bg-color;
- }
+.prices {
+  background-color: $secondary-bg-color;
+}
+
+.prices__plan-header {
+  background-color: $main-dark-color;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.prices__plan-label {
+  font-weight: 400;
+  line-height: 1;
+}
+
+.prices__plan-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.66666667;
+
+  b {
+    font-weight: inherit;
+  }
+}
+
+.prices__plan-value {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.prices__feature-name {
+  line-height: 2.14285714;
+  text-transform: uppercase;
+}
