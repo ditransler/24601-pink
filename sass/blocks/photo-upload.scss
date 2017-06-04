@@ -1,9 +1,25 @@
 .photo-upload {
-  background-color: $secondary-bg-color;
+  padding-top: 27px;
+
+  outline: 1px solid orangered;
+}
+
+.photo-upload__header {
+  margin-bottom: 49px;
 }
 
 .photo-upload__subtitle {
   line-height: 2.14285714;
+}
+
+.photo-upload__form {
+  background-color: $secondary-bg-color;
+  padding-top: 20px;
+}
+
+.photo-upload__form-footer {
+  padding-bottom: 41px;
+  padding-top: 38px;
 }
 
 .photo-upload__submit {
