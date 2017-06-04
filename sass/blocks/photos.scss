@@ -1,3 +1,48 @@
+.photos__subtitle {
+  line-height: 2.14285714;
+}
+
 .photos__item-info {
   background-color: $secondary-bg-color;
+}
+
+.photos__item-label {
+  background-color: $brand-color;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.photos__author {
+  b {
+    font-weight: 700;
+  }
+}
+
+.photos__item-time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    font-size: 14px;
+  }
+
+  &::before {
+    content: "(";
+  }
+
+  &::after {
+    content: ")";
+  }
+}
+
+.photos__likes-counter {
+  color: $brand-color;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
 }
