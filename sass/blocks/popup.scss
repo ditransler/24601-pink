@@ -1,3 +1,16 @@
+.popup {
+  outline: 1px solid pink;
+}
+
+.popup__inner {
+  padding-top: 43px;
+}
+
+.popup__content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .popup__title {
   color: #000;
   font-size: 18px;
@@ -7,4 +20,14 @@
   strong {
     font-weight: inherit;
   }
+}
+
+.popup__footer {
+  padding: 7px 20px 50px;
+}
+
+.popup--success .popup__footer {
+  background-color: $secondary-bg-color;
+  padding-bottom: 52px;
+  padding-top: 48px;
 }
