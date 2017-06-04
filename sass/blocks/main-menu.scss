@@ -1,8 +1,23 @@
+.main-menu {
+  outline: 1px solid red;
+}
+
+.main-menu__header {
+  padding: 20px;
+}
+
+.main-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .main-menu__item {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.77777778;
+  padding: 17px 20px;
   text-transform: uppercase;
 }
 
