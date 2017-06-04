@@ -1,3 +1,9 @@
+.contest {
+  padding: 50px 0;
+
+  outline: 1px solid red;
+}
+
 .contest__subtitle {
   line-height: 2.14285714;
 }
@@ -16,12 +22,24 @@
   text-transform: uppercase;
 }
 
+.contest__fullname {
+  margin-bottom: 42px;
+}
+
 .contest__travel-achievements {
   background-color: $secondary-bg-color;
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+.contest__contacts {
+  margin-bottom: 42px;
 }
 
 .contest__app-platform {
   background-color: $secondary-bg-color;
+  margin-bottom: 40px;
+  padding-top: 40px;
 }
 
 .contest__required-note {
