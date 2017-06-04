@@ -1,0 +1,13 @@
+.input {
+  color: $main-dark-color;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+
+  @include placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}
