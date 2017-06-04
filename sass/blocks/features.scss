@@ -1,6 +1,4 @@
 .features__header {
-  color: #283645;
-  font-family: $base-font-family;
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
@@ -11,17 +9,11 @@
 }
 
 .features__item-title {
-  color: $main-dark-color;
-  font-family: $base-font-family;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
 }
 
-.features__item-description {
-  color: $main-dark-color;
-  font-family: $base-font-family;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71428571;
+.features__item-title strong {
+  font-weight: inherit;
 }
