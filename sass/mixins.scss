@@ -17,3 +17,16 @@
     @content;
   }
 }
+
+@mixin container {
+  margin: 0 auto;
+  width: 320px;
+
+  @media #{$tablet-widths} {
+    width: 660px;
+  }
+
+  @media #{$desktop-widths} {
+    width: 960px;
+  }
+}
