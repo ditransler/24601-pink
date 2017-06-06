@@ -1,0 +1,35 @@
+.features {
+  outline: 1px solid red;
+}
+
+.features__container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.features__header {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 40px 0;
+}
+
+.features__body {
+  background-color: $secondary-bg-color;
+}
+
+.features__list {
+  list-style: none;
+  margin: 0;
+  padding: 50px 0;
+}
+
+.features__item-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.features__item-title strong {
+  font-weight: inherit;
+}

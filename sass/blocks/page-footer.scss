@@ -1,0 +1,22 @@
+.page-footer {
+  outline: 1px solid green;
+}
+
+.page-footer__container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-footer__contacts {
+  padding: 30px 0 38px;
+}
+
+.page-footer__developers {
+  line-height: 1.28571429;
+}
+
+.page-footer__map {
+  background: $secondary-bg-color url("../img/bg-map-mobile@1x.png") center center no-repeat;
+  background-size: cover;
+  min-height: 421px;
+}

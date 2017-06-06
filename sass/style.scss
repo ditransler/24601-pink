@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import "variables";
+
+@import "mixins";
+
+@import "../node_modules/normalize.css/normalize";
+
+@import "typography";
+
+@import "general";
+
+/* Blocks */
+@import "blocks/visually-hidden";
+
+@import "blocks/input";
+@import "blocks/textarea";
+@import "blocks/radio";
+@import "blocks/checkbox";
+@import "blocks/btn";
+
+@import "blocks/page-header";
+@import "blocks/main-menu";
+@import "blocks/intro";
+@import "blocks/downloading";
+@import "blocks/available-platforms";
+@import "blocks/features";
+@import "blocks/testimonials";
+@import "blocks/prices";
+@import "blocks/page-footer";
+@import "blocks/contacts";
+@import "blocks/contest";
+@import "blocks/photos";
+@import "blocks/photo-upload";
+@import "blocks/popup";

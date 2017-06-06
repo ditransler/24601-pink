@@ -1,0 +1,22 @@
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  color: $main-dark-color;
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: $base-line-height;
+}

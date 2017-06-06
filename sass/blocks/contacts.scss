@@ -1,0 +1,26 @@
+.contacts__title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.contacts__item-label {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  b {
+    font-weight: inherit;
+  }
+}
+
+.contacts__item-value {
+  color: $brand-color;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  &--link {
+    text-decoration: none;
+  }
+}
