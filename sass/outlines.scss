@@ -1,0 +1,16 @@
+body {
+  background: #fff url("../img/previews/pink-index-mobile.jpg") no-repeat 50% 0;
+  min-height: 750px;
+}
+
+@media #{$tablet-widths} {
+  body {
+    background: #fff url("../img/previews/pink-index-tablet.jpg") no-repeat 50% 0;
+  }
+}
+
+@media #{$desktop-widths} {
+  body {
+    background: #fff url("../img/previews/pink-index-desktop.jpg") no-repeat 50% 0;
+  }
+}
