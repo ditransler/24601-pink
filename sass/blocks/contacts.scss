@@ -1,7 +1,25 @@
+.contacts {
+  padding-top: 45px;
+}
+
+.contacts__container {
+  @include container();
+}
+
 .contacts__title {
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
+  margin: 0 auto;
+  max-width: 220px;
+  text-align: center;
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .contacts__item-label {
@@ -28,5 +46,50 @@
 .contacts__map {
   background: $secondary-bg-color url("../img/bg-map-mobile@1x.png") center center no-repeat;
   background-size: cover;
-  min-height: 421px;
+  min-height: 200px;
+}
+
+@media #{$tablet-widths} {
+  .contacts__title {
+    font-size: 40px;
+    line-height: 1.25;
+    max-width: 370px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contacts__item {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+  }
+
+
+  .contacts__map {
+    min-height: 375px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .contacts__title {
+    font-size: 50px;
+    line-height: 1.2;
+    max-width: 465px;
+  }
+
+  .contacts__list {
+    justify-content: space-between;
+  }
+
+  .contacts__item {
+    width: 33%;
+  }
+
+  .contacts__map {
+    min-height: 500px;
+  }
 }
