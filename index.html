@@ -121,28 +121,33 @@
       <section class="testimonials">
         <div class="testimonials__container">
           <h2 class="testimonials__title visually-hidden">Отзывы пользователей Pink</h2> <!-- accessibly hidden! -->
-          <div class="testimonials__slider-wrapper slider">
-            <div class="testimonials__list-wrapper slider__wrapper">
-              <div class="testimonials__list slider__inner">
-                <blockquote class="testimonials__item slider__item">
-                  <cite class="testimonials__author-name">Николай Петров</cite>
-                  <p class="testimonials__item-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть
+          <div class="testimonials__slider-wrapper">
+            <button class="testimonials__slider-arrow testimonials__slider-arrow--prev btn" type="button">Назад</button>
+            <div class="testimonials__list-wrapper">
+              <div class="testimonials__list">
+                <blockquote class="testimonials__item">
+                  <cite class="testimonials__author">
+                    <span class="testimonials__author-name">Николай Петров</span>
+                    <span class="testimonials__author-info">25 лет, водитель трамвая</span>
+                  </cite>
+                  <p class="testimonials__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть
                     на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
-                    фотографии!&raquo;</p>
+                    фотографии!</p>
                 </blockquote>
               </div>
-              <ul class="testimonials__slider-bullets slider__bullets">
-                <li class="slider__bullet">
-                  <button class="slider__bullet-btn" type="button" title="Отзыв №1">1</button>
+              <ul class="testimonials__slider-bullets">
+                <li class="testimonials__slider-bullet">
+                  <button class="testimonials__slider-bullet-btn btn" type="button" title="Отзыв №1">1</button>
                 </li>
-                <li class="slider__bullet">
-                  <button class="slider__bullet-btn" type="button" title="Отзыв №2">2</button>
+                <li class="testimonials__slider-bullet">
+                  <button class="testimonials__slider-bullet-btn btn" type="button" title="Отзыв №2">2</button>
                 </li>
-                <li class="slider__bullet">
-                  <button class="slider__bullet-btn" type="button" title="Отзыв №3">3</button>
+                <li class="testimonials__slider-bullet">
+                  <button class="testimonials__slider-bullet-btn btn" type="button" title="Отзыв №3">3</button>
                 </li>
               </ul>
             </div>
+            <button class="testimonials__slider-arrow testimonials__slider-arrow--next btn" type="button">Вперед</button>
           </div>
         </div>
       </section>
