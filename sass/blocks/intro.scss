@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-@media (max-width: 660px) {
+@media #{$max-tablet-widths} {
   .intro__downloading-slogan {
     @include visually-hidden();
   }
@@ -44,7 +44,7 @@
   width: 320px;
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .intro {
     margin-top: -110px;
     min-height: 729px;
@@ -89,7 +89,7 @@
   }
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .intro {
     min-height: 849px;
     padding-top: 209px;

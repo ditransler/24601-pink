@@ -104,13 +104,13 @@
   }
 }
 
-@media (max-width: 599px) {
+@media #{$max-tablet-widths} {
   .contest__subtitle-extra {
     display: none;
   }
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .contest__subtitle {
     font-size: 18px;
     line-height: 1.66666667;
@@ -172,13 +172,13 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media #{$max-desktop-widths} {
   .contest__required-note-extra {
     @include visually-hidden();
   }
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .contest__subtitle {
     max-width: 760px;
   }

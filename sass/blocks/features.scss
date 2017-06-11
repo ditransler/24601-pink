@@ -45,13 +45,13 @@
   width: 1257px;
 }
 
-@media (max-width: 660px) {
+@media #{$max-tablet-widths} {
   .features__research {
     @include visually-hidden();
   }
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .features__container {
     position: relative;
   }
@@ -101,7 +101,7 @@
   }
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .features__header {
     min-height: 417px;
   }

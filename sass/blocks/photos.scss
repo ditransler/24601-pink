@@ -92,7 +92,7 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .photos__subtitle {
     font-size: 18px;
     line-height: 1.66666667;
@@ -119,7 +119,7 @@
   }
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .photos__subtitle {
     max-width: 575px;
   }

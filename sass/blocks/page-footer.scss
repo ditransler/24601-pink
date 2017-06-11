@@ -10,13 +10,13 @@
   line-height: 1.28571429;
 }
 
-@media (max-width: 559px) {
+@media #{$max-tablet-widths} {
   .page-footer--index {
     @include visually-hidden();
   }
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .page-footer__container {
     display: flex;
     justify-content: space-between;

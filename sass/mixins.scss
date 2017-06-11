@@ -23,11 +23,11 @@
   padding: 0 20px;
   width: 320px;
 
-  @media #{$tablet-widths} {
+  @media #{$min-tablet-widths} {
     width: 660px;
   }
 
-  @media #{$desktop-widths} {
+  @media #{$min-desktop-widths} {
     padding-left: 10px;
     padding-right: 10px;
     width: 960px;

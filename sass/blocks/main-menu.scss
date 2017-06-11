@@ -30,13 +30,13 @@
   text-decoration: none;
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .main-menu__header {
     height: 111px;
   }
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .main-menu {
     display: flex;
     min-height: 110px;

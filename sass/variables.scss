@@ -7,5 +7,7 @@ $secondary-bg-color: #f2f2f2;
 $base-font-family: "Open Sans", Helvetica, sans-serif;
 $base-line-height: 1.71428571; // 24px/14px
 
-$tablet-widths: "(min-width: 660px)";
-$desktop-widths: "(min-width: 1200px)";
+$min-tablet-widths: "(min-width: 660px)";
+$max-tablet-widths: "(max-width: 659px)";
+$min-desktop-widths: "(min-width: 1200px)";
+$max-desktop-widths: "(min-width: 1199px)";

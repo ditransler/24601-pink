@@ -7,7 +7,7 @@
   @include container();
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .page-header {
     min-height: 110px;
   }

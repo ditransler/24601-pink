@@ -21,7 +21,7 @@
   line-height: 1.66666667;
 }
 
-@media (max-width: 659px) {
+@media #{$max-tablet-widths} {
   .testimonials__author-info {
     @include visually-hidden();
   }
@@ -40,7 +40,7 @@
   width: 62px;
 }
 
-@media #{$tablet-widths} {
+@media #{$min-tablet-widths} {
   .testimonials__item {
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@
   }
 }
 
-@media #{$desktop-widths} {
+@media #{$min-desktop-widths} {
   .testimonials__item-text {
     max-width: 680px;
   }
