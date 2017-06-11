@@ -1,12 +1,24 @@
 .page-footer {
-  outline: 1px solid green;
+  padding: 36px 0;
 }
 
 .page-footer__container {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include container();
 }
 
 .page-footer__developers {
   line-height: 1.28571429;
+}
+
+@media (max-width: 559px) {
+  .page-footer--index {
+    @include visually-hidden();
+  }
+}
+
+@media #{$tablet-widths} {
+  .page-footer__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
