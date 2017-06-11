@@ -86,6 +86,19 @@
   .features__research-content {
     padding-left: 310px;
   }
+
+  .features__research-title {
+    font-size: 30px;
+    line-height: 1.2;
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  .features__research-more {
+    color: $brand-color;
+  }
 }
 
 @media #{$desktop-widths} {
@@ -130,5 +143,19 @@
 
   .features__research-content {
     padding-left: 370px;
+  }
+
+  .features__research-title {
+    line-height: 1;
+  }
+
+  .features__research-description {
+    font-size: 18px;
+    line-height: 1.66666667;
+  }
+
+  .features__research-more {
+    font-size: 18px;
+    line-height: 1.66666667;
   }
 }
