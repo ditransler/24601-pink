@@ -1,12 +1,9 @@
 .photo-upload {
   padding-top: 27px;
-
-  outline: 1px solid orangered;
 }
 
 .photo-upload__container {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include container();
 }
 
 .photo-upload__header {
@@ -15,14 +12,20 @@
 
 .photo-upload__subtitle {
   line-height: 2.14285714;
+  text-align: center;
 }
 
 .photo-upload__form {
   background-color: $secondary-bg-color;
+  min-height: 280px;
   padding-top: 20px;
 }
 
-.photo-upload__form-footer {
+.photo-upload__preview {
+  margin-bottom: 35px;
+}
+
+.photo-upload__form-buttons  {
   padding-bottom: 41px;
   padding-top: 38px;
 }
@@ -38,4 +41,46 @@
   color: rgba($main-dark-color, 0.1);
   font-size: 18px;
   font-weight: 700;
+}
+
+@media #{$tablet-widths} {
+  .photos__subtitle {
+    font-size: 18px;
+    line-height: 1.66666667;
+    margin: 0 auto;
+    max-width: 440px;
+  }
+
+  .photo-upload__form .photo-upload__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo-upload__preview {
+    margin-bottom: 0;
+    min-height: 400px;
+    width: 48.4%;
+  }
+
+  .photo-upload__edit {
+    width: 48.8%;
+  }
+}
+
+@media #{$desktop-widths} {
+  .photos__subtitle {
+    max-width: 570px;
+  }
+
+  .photo-upload__form .photo-upload__container {
+    justify-content: flex-start;
+  }
+
+  .photo-upload__preview {
+    width: 50%;
+  }
+
+  .photo-upload__edit {
+    width: 43.6%;
+  }
 }
