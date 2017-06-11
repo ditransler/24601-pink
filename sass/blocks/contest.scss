@@ -5,12 +5,17 @@
 }
 
 .contest__container {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include container();
 }
 
 .contest__subtitle {
   line-height: 2.14285714;
+  text-align: center;
+}
+
+.contest__form {
+  display: flex;
+  flex-direction: column;
 }
 
 .contest__form-legend {
@@ -18,6 +23,12 @@
   font-size: 14px;
   line-height: 1.28571429;
   text-transform: uppercase;
+}
+
+.contest__form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .contest__form-label {
@@ -29,28 +40,187 @@
 
 .contest__fullname {
   margin-bottom: 42px;
+  min-height: 369px;
+  padding-top: 34px;
 }
 
 .contest__travel-achievements {
   background-color: $secondary-bg-color;
   margin-bottom: 40px;
+  min-height: 566px;
   padding-top: 40px;
+}
+
+.contest__checkboxes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .contest__contacts {
   margin-bottom: 42px;
+  min-width: 256px;
+  padding-top: 32px;
 }
 
 .contest__app-platform {
   background-color: $secondary-bg-color;
   margin-bottom: 40px;
+  min-height: 303px;
   padding-top: 40px;
 }
 
+.contest__app-platform .contest__container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 280px;
+}
+
+.contest__radios-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contest__emotions {
+  padding-top: 40px;
+  min-height: 236px;
+}
+
+.contest__emotions .contest__form-label {
+  display: block;
+}
+
+.contest__form-footer {
+  width: 100%;
+}
+
 .contest__required-note {
+  margin: 0;
+  margin-top: 35px;
+  text-align: center;
   text-transform: uppercase;
 
   sup {
     color: $brand-color;
+  }
+}
+
+@media (max-width: 599px) {
+  .contest__subtitle-extra {
+    display: none;
+  }
+}
+
+@media #{$tablet-widths} {
+  .contest__subtitle {
+    font-size: 18px;
+    line-height: 1.66666667;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .contest__fullname {
+    order: 1;
+  }
+
+  .contest__fullname .contest__form-group {
+    flex-direction: row;
+  }
+
+  .contest__travel-achievements {
+    background-color: #fff;
+    order: 4;
+  }
+
+  .contest__checkboxes-list {
+    margin-left: 60px;
+  }
+
+  .contest__contacts {
+    order: 3;
+  }
+
+  .contest__contacts .contest__form-label {
+    order: 2;
+  }
+
+  .contest__contacts .contest__form-input {
+    order: 1;
+  }
+
+  .contest__app-platform {
+    background-color: #fff;
+    order: 2;
+  }
+
+  .contest__emotions {
+    order: 5;
+  }
+
+  .contest__form-footer {
+    order: 7;
+    padding-top: 67px;
+  }
+
+  .contest__form-footer .contest__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contest__required-note {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .contest__required-note-extra {
+    @include visually-hidden();
+  }
+}
+
+@media #{$desktop-widths} {
+  .contest__subtitle {
+    max-width: 760px;
+  }
+
+  .contest__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contest__fullname {
+    width: 50%;
+  }
+
+  .contest__travel-achievements {
+    width: 100%;
+  }
+
+  .contest__contacts {
+    width: 100%;
+  }
+
+  .contest__contacts  .contest__form-group {
+    width: 45.6%;
+  }
+
+  .contest__checkboxes-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 1px;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 60px;
+  }
+
+  .contest__app-platform {
+    width: 50%;
+  }
+
+  .contest__emotions {
+    width: 100%;
   }
 }
