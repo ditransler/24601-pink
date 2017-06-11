@@ -1,5 +1,6 @@
 .intro {
-  background: #1d2631 url("../img/bg-back-mobile@1x.jpg");
+  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-size: cover;
   min-height: 237px;
   margin-top: -66px;
   padding-top: 176px;
@@ -10,6 +11,7 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
+  text-align: center;
 }
 
 @media (max-width: 660px) {
@@ -47,6 +49,11 @@
     margin-top: -110px;
     min-height: 729px;
     padding-top: 184px;
+  }
+
+  .intro__title {
+    font-size: 50px;
+    line-height: 1.2;
   }
 
   .intro__container {
