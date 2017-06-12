@@ -48,3 +48,22 @@
   margin: 0;
   text-align: center;
 }
+
+@media #{$min-tablet-widths} {
+  .available-platforms {
+    padding-top: 43px;
+  }
+
+  .available-platforms__list {
+    margin-bottom: 40px;
+  }
+
+  .available-platforms__link--android {
+    opacity: 0.4;
+  }
+
+  .available-platforms__note {
+    font-size: 18px;
+    line-height: 1.33333333;
+  }
+}

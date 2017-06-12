@@ -44,8 +44,7 @@
 @media #{$min-tablet-widths} {
   .intro {
     margin-top: -110px;
-    min-height: 729px;
-    padding-top: 184px;
+    padding-top: 200px;
   }
 
   .intro__title {
@@ -58,12 +57,26 @@
     position: relative;
   }
 
+  .intro__downloading-slogan {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 auto 32px;
+    max-width: 195px;
+    text-align: center;
+
+    b {
+      font-weight: inherit;
+    }
+  }
+
   .intro__device-preview {
     bottom: 0;
     height: 546px;
     position: absolute;
     right: 20px;
-    width: 546px;
+    width: 470px;
   }
 
   .intro__device-preview img {
@@ -73,9 +86,8 @@
 
   .intro__downloading {
     background-color: transparent;
-    height: 1px;
     max-width: 300px;
-    min-height: 403px;
+    padding-bottom: 109px;
     position: relative;
   }
 
