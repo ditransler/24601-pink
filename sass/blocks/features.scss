@@ -94,30 +94,58 @@
   }
 
   .features__header {
-    min-height: 290px;
+    padding-bottom: 49px;
+    padding-top: 49px;
+
+    &::after {
+      height: 50px;
+    }
+  }
+
+  .features__subtitle {
+    font-size: 40px;
+    line-height: 1.2;
+    max-width: none;
+
+    & + & {
+      margin-top: 0;
+      max-width: 340px;
+    }
   }
 
   .features__items {
-    min-height: 434px;
+    overflow: visible;
+    padding-bottom: 42px;
+    padding-top: 45px;
   }
 
   .features__list {
-    min-height: 434px;
+    margin-bottom: 0;
     padding-left: 310px;
+    text-align: left;
+  }
+
+  .features__item {
+    margin-bottom: 37px;
   }
 
   .features__device-preview {
     left: 20px;
-    bottom: 0;
-    height: 484px;
+    height: 547px;
     position: absolute;
+    top: -75px;
     width: 268px;
+
+    img {
+      height: 547px;
+      width: 268px;
+    }
   }
 
   .features__research {
-    height: 1px;
-    min-height: 393px;
-    padding: 59px 0;
+    background-color: #fff;
+    padding: 96px 0;
+    position: relative;
   }
 
   .features__research-content {
@@ -126,11 +154,17 @@
 
   .features__research-title {
     font-size: 30px;
+    font-weight: 700;
     line-height: 1.2;
+    margin: 0 0 10px;
 
     b {
-      font-weight: 700;
+      font-weight: inherit;
     }
+  }
+
+  .features__research-description {
+    margin: 0 0 10px;
   }
 
   .features__research-more {
