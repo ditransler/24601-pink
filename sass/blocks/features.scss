@@ -1,48 +1,85 @@
-.features {
-  min-height: 1002px;
-}
-
 .features__container {
   @include container();
-  height: 100%;
 }
 
 .features__header {
   font-size: 24px;
   font-weight: 300;
-  height: 1px;
   line-height: 1.2;
-  min-height: 249px;
-  padding: 0;
+  padding: 41px 0 31px;
+  position: relative;
+
+  &::after {
+    background: url("../img/bg-triangle-white.svg") 0 100% no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 31px;
+    top: 100%;
+    width: 100%;
+  }
+}
+
+.features__subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 auto;
+  max-width: 205px;
+  text-align: center;
+
+  & + & {
+    margin-top: 31px;
+  }
+}
+
+.features__body {
+  background-color: $secondary-bg-color;
+  padding-top: 31px;
 }
 
 .features__items {
-  background-color: $secondary-bg-color;
-  height: 1px;
-  min-height: 754px;
+  overflow: hidden;
+  padding-top: 55px;
+}
 
+.features__item {
+  margin-bottom: 34px;
+
+  &:last-child {
+    /* to fit text like in design */
+    margin: 0 -1px 0;
+  }
 }
 
 .features__list {
   list-style: none;
   margin: 0;
-  min-height: 478px;
+  margin-bottom: 40px;
   padding: 0;
+  text-align: center;
 }
 
 .features__item-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
+  margin: 0 0 15px;
 }
 
 .features__item-title strong {
   font-weight: inherit;
 }
 
+.features__item-description {
+  margin: 0;
+}
+
 .features__device-preview {
   height: 277px;
-  width: 1257px;
+  margin: 0 auto;
+  width: 157px;
 }
 
 @media #{$max-tablet-widths} {
