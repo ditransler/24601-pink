@@ -3,8 +3,8 @@
   position: relative;
 
   &::after {
-    background: url("../img/bg-triangle-white.svg") 0 100% no-repeat;
-    background-size: cover;
+    background: url("../img/bg-triangle-white.svg") 0 0 no-repeat;
+    background-size: contain;
     content: "";
     left: 0;
     position: absolute;
@@ -100,24 +100,40 @@
 }
 
 @media #{$min-tablet-widths} {
+  .testimonials {
+    padding-bottom: 21px;
+    padding-top: 29px;
+
+    &::after {
+      height: 51px;
+    }
+  }
   .testimonials__item {
     display: flex;
     flex-direction: column;
   }
 
   .testimonials__author {
-    font-size: 20px;
+    margin-bottom: 0;
     order: 2;
+    text-align: center;
   }
 
-  .testimonials__author-info {
-    font-size: 18px;
+  .testimonials__author-name {
+    font-size: 20px;
+    display: block;
+    margin: 0 0 5px;
   }
 
   .testimonials__item-text {
     font-size: 18px;
     line-height: 1.66666667;
+    margin-bottom: 33px;
     order: 1;
+  }
+
+  .testimonials__slider-bullets {
+    margin-top: 36px;
   }
 }
 
