@@ -241,6 +241,34 @@
 
 @media #{$min-desktop-widths} {
   .prices {
-    min-width: 442px;
+    padding-bottom: 94px;
+    padding-top: 143px;
+  }
+
+  .prices__plan-cell {
+
+    &--hit {
+
+    }
+
+    .prices__plan-header & {
+      padding-bottom: 21px;
+    }
+
+    .prices__plan-features & {
+      padding: 16px 20px 17px;
+    }
+  }
+
+  .prices__plan-title {
+    font-size: 18px;
+  }
+
+  .prices__plan-value {
+    font-size: 24px;
+  }
+
+  .prices__feature-name {
+    font-size: 18px;
   }
 }
