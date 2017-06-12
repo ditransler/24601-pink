@@ -10,10 +10,9 @@
   align-items: center;
   border-bottom: 1px solid #000;
   display: flex;
-  height: 71px;
   justify-content: space-between;
 
-  padding: 22px 20px 25px;
+  padding: 22px 20px 24px;
 }
 
 .main-menu__logo {
@@ -75,7 +74,14 @@
 
 @media #{$min-tablet-widths} {
   .main-menu__header {
-    height: 111px;
+    align-items: flex-end;
+    padding-bottom: 43px;
+    padding-top: 27px;
+  }
+
+  .main-menu__logo {
+    height: 40px;
+    width: 147px;
   }
 }
 

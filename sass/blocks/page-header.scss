@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  z-index: 1;
 }
 
 @media #{$min-desktop-widths} {
