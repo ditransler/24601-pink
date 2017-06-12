@@ -1,33 +1,76 @@
 .main-menu {
-  min-height: 326px;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &--opened {
+    background-color: #283645;
+  }
 }
 
 .main-menu__header {
+  align-items: center;
+  border-bottom: 1px solid #000;
+  display: flex;
   height: 71px;
+  justify-content: space-between;
 
-  padding: 20px;
+  padding: 22px 20px 25px;
+}
+
+.main-menu__logo {
+  height: 22px;
+  width: 75px;
+}
+
+.main-menu__toggle {
+  background: url("../img/icon-menu-burger.svg") no-repeat;
+  font-size: 0;
+  height: 24px;
+  width: 50px;
+
+  .main-menu--opened & {
+    background-image: url("../img/icon-menu-cross.svg");
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .main-menu__list {
   list-style: none;
   margin: 0;
   padding: 0;
-
-  min-height: 255px;
+  text-align: center;
 }
 
 .main-menu__item {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid rgba(#fff, 0.15);
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.77777778;
-  padding: 17px 20px;
+  padding: 15px 20px;
   text-transform: uppercase;
+
+  &:not(&--active):hover {
+    color: $brand-color;
+  }
+
+  &:not(&--active):active {
+    color: rgba($brand-color, 0.3);
+  }
+
+  &--active {
+    cursor: default;
+  }
 }
 
 .main-menu__link {
   color: inherit;
   text-decoration: none;
+
+  .main-menu__item--active & {
+    border-bottom: 2px solid currentColor;
+  }
 }
 
 @media #{$min-tablet-widths} {
