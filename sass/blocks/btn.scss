@@ -23,10 +23,22 @@
   }
 
   &--downloading {
+    border: 3px solid #fff;
+    border-radius: 30px;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
-    text-decoration: none;
+    min-width: 280px;
+    padding: 14px 31px 17px;
+
+    &:hover {
+      background: #fff;
+      color: $brand-color;
+    }
+
+    &:active {
+      color: rgba($brand-color, 0.3);
+    }
   }
 }
