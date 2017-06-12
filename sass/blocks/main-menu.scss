@@ -87,18 +87,43 @@
 
 @media #{$min-desktop-widths} {
   .main-menu {
-    display: flex;
-    min-height: 110px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 28px 0 42px;
   }
 
   .main-menu__header {
-    width: 150px;
-    min-height: 110px;
+    border: 0;
+    flex: none;
+    padding: 0;
+    width: 147px;
   }
 
   .main-menu__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     margin-left: auto;
-    min-height: 110px;
-    width: 630px;
+    padding-top: 9px;
+    width: 621px;
+  }
+
+  .main-menu__item {
+    border: 0;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0;
+    text-transform: none;
+
+    &:not(&--active):active {
+      color: rgba(#fff, 0.3);
+    }
+
+    &--active .main-menu__link {
+      padding-bottom: 3px;
+    }
+  }
+
+  .main-menu__toggle {
+    display: none;
   }
 }

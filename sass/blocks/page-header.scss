@@ -4,7 +4,9 @@
 }
 
 @media #{$min-desktop-widths} {
-  .page-header {
-    min-height: 110px;
+  .page-header__container {
+    @include container();
+
+    display: flex;
   }
 }
