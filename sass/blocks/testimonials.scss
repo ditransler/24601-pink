@@ -1,5 +1,17 @@
 .testimonials {
-  padding: 45px 0;
+  padding: 43px 0;
+  position: relative;
+
+  &::after {
+    background: url("../img/bg-triangle-white.svg") 0 100% no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 26px;
+    top: 100%;
+    width: 100%;
+  }
 }
 
 .testimonials__container {
@@ -7,12 +19,15 @@
 }
 
 .testimonials__item {
+  margin: 0;
   text-align: center;
 }
 
 .testimonials__author {
   color: #000;
+  display: block;
   font-style: normal;
+  margin-bottom: 13px;
 }
 
 .testimonials__author-name {
@@ -29,15 +44,59 @@
 
 .testimonials__item-text {
   line-height: 2.14285714;
+  margin: 0;
+
+  &::before {
+    content: "\00ab";
+  }
+
+  &::after {
+    content: "\00bb";
+  }
 }
 
 .testimonials__slider-bullets {
   font-size: 0;
   height: 12px;
   list-style: none;
-  margin: 0 auto;
+  margin: 33px auto 0;
   padding: 0;
-  width: 62px;
+  text-align: center;
+}
+
+.testimonials__slider-bullet {
+  display: inline-block;
+  height: 12px;
+  vertical-align: middle;
+  width: 12px;
+
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+.testimonials__slider-bullet-btn {
+  background-color: rgba($main-dark-color, 0.3);
+  background-clip: content-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba($main-dark-color, 0.6);
+  }
+
+  &:active {
+    background-color: rgba($main-dark-color, 0.1);
+  }
+
+  .testimonials__slider-bullet--active & {
+    background-color: #fff;
+    border-color: $main-dark-color;
+    cursor: default;
+  }
 }
 
 @media #{$min-tablet-widths} {
