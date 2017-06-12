@@ -1,4 +1,18 @@
 .btn {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
   &--confirm {
     background-color: $confirm-color;
     color: #fff;
