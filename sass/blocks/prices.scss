@@ -15,7 +15,6 @@
 }
 
 .prices__plan-header {
-  background-color: $main-dark-color;
   color: #fff;
   text-transform: uppercase;
 }
@@ -55,6 +54,7 @@
   }
 
   .prices__plan-header & {
+    background-color: $main-dark-color;
     border-bottom: 0;
     padding: 16px 15px 21px;
   }
@@ -160,11 +160,78 @@
 
 @media #{$min-tablet-widths} {
   .prices {
-    min-height: 325px;
+    padding-bottom: 66px;
+    padding-top: 86px;
   }
 
   .prices__container {
     @include container();
+  }
+
+  .prices__slider-list {
+    overflow: visible;
+  }
+
+  .prices__plan-cell {
+    width: 155px;
+
+    &--hit {
+      position: relative;
+
+      &::before {
+        background-image: url("../img/bg-hit-tablet.svg");
+        height: 61px;
+        left: 0;
+        width: 61px;
+      }
+
+      &::after {
+        left: 7px;
+        top: 12px;
+      }
+    }
+
+    &:not(:first-child) {
+      text-align: center;
+    }
+
+    &:first-child {
+      display: table-cell;
+
+      .prices__plan-header & {
+        background-color: transparent;
+        border: 0;
+      }
+    }
+
+    .prices__plan-header & {
+      padding-bottom: 13px;
+      padding-top: 15px;
+    }
+
+    .prices__plan-features & {
+      padding-bottom: 12px;
+      padding-top: 7px;
+    }
+  }
+
+  .prices__plan-title {
+    font-size: 16px;
+  }
+
+  .prices__plan-value {
+    font-size: 18px;
+  }
+
+  .prices__feature-name {
+    font-size: 14px;
+    padding-left: 0;
+    text-transform: none;
+    width: auto;
+
+    .prices__plan-cell:not(:first-child) & {
+      display: none;
+    }
   }
 
   .prices__slider-bullets {
