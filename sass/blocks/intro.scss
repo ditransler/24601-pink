@@ -1,9 +1,8 @@
 .intro {
   background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-size: cover;
-  min-height: 237px;
   margin-top: -66px;
-  padding-top: 176px;
+  padding-top: 174px;
 }
 
 .intro__title {
@@ -22,19 +21,17 @@
 
 .intro__device-preview {
   margin: 0 auto;
-  min-height: 286px;
   width: 320px;
 }
 
 .intro__device-preview img {
   height: 286px;
+  display: block;
   width: 258px;
 }
 
 .intro__downloading {
   background-color: #1d2631;
-  height: 1px;
-  min-height: 271px;
 }
 
 .intro__downloading-wrapper {
