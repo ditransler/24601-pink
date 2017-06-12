@@ -42,3 +42,10 @@
     }
   }
 }
+
+@media #{$min-desktop-widths} {
+  .btn--downloading {
+    font-size: 21px;
+    padding: 14px 21px;
+  }
+}

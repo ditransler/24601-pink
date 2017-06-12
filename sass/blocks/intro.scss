@@ -100,8 +100,13 @@
 
 @media #{$min-desktop-widths} {
   .intro {
-    min-height: 849px;
-    padding-top: 209px;
+    padding-top: 218px;
+  }
+
+  .intro__downloading-slogan {
+    font-size: 50px;
+    margin-bottom: 52px;
+    max-width: 237px;
   }
 
   .intro__device-preview {
@@ -109,14 +114,14 @@
     position: absolute;
     right: 50px;
     width: 555px;
-  }
 
-  .intro__device-preview img {
-    height: 644px;
-    width: 555px;
+    img {
+      height: 644px;
+      width: 555px;
+    }
   }
 
   .intro__downloading {
-    min-height: 498px;
+    padding-bottom: 122px;
   }
 }

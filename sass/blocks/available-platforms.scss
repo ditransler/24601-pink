@@ -67,3 +67,13 @@
     line-height: 1.33333333;
   }
 }
+
+@media #{$min-desktop-widths} {
+  .available-platforms {
+    padding-top: 65px;
+  }
+
+  .available-platforms__list {
+    margin-bottom: 57px;
+  }
+}
