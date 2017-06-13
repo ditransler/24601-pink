@@ -15,11 +15,28 @@
 
   &--confirm {
     background-color: $confirm-color;
+    border-radius: 5px;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
+    min-width: 280px;
+    padding: 22px 40px 19px;
     text-transform: uppercase;
+
+    &:hover {
+      background-color: $confirm-color--hover;
+    }
+
+    &:active {
+      color: rgba(#fff, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   &--downloading {
