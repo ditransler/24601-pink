@@ -1,13 +1,18 @@
 .contest {
-  padding: 50px 0;
+  padding: 45px 0 21px;
 }
 
 .contest__container {
   @include container();
+
+  .contest__fullname & {
+    border: 0;
+  }
 }
 
 .contest__subtitle {
   line-height: 2.14285714;
+  margin: 0;
   text-align: center;
 }
 
@@ -20,51 +25,61 @@
   color: $brand-color;
   font-size: 14px;
   line-height: 1.28571429;
+  text-align: center;
   text-transform: uppercase;
+
+  .contest__emotions & {
+    margin-bottom: 16px;
+  }
 }
 
 .contest__form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
 }
 
 .contest__form-label {
   color: $brand-color;
+  display: block;
   font-size: 14px;
   line-height: 2.14285714;
+  margin-bottom: 5px;
+  padding-left: 20px;
   text-transform: uppercase;
 }
 
 .contest__fullname {
   margin-bottom: 42px;
-  min-height: 369px;
   padding-top: 34px;
 }
 
 .contest__travel-achievements {
   background-color: $secondary-bg-color;
-  margin-bottom: 40px;
-  min-height: 566px;
   padding-top: 40px;
 }
 
 .contest__checkboxes-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 41px 0 47px;
+}
+
+.contest__checkboxes-item:not(:last-child) {
+  margin-bottom: 52px;
 }
 
 .contest__contacts {
-  margin-bottom: 42px;
-  min-width: 256px;
+  padding-bottom: 42px;
   padding-top: 32px;
 }
 
 .contest__app-platform {
   background-color: $secondary-bg-color;
-  margin-bottom: 40px;
-  min-height: 303px;
+  padding-bottom: 47px;
   padding-top: 40px;
 }
 
@@ -77,12 +92,17 @@
 .contest__radios-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  margin-left: -20px;
+  padding: 37px 0 0;
+}
+
+.contest__radios-item:not(:last-child) {
+  margin-bottom: 45px;
 }
 
 .contest__emotions {
-  padding-top: 40px;
-  min-height: 236px;
+  padding-bottom: 41px;
+  padding-top: 38px;
 }
 
 .contest__emotions .contest__form-label {
@@ -95,12 +115,14 @@
 
 .contest__required-note {
   margin: 0;
-  margin-top: 35px;
+  margin-top: 38px;
   text-align: center;
   text-transform: uppercase;
 
   sup {
     color: $brand-color;
+    display: inline-block;
+    vertical-align: sub;
   }
 }
 
@@ -108,6 +130,11 @@
   .contest__subtitle-extra {
     display: none;
   }
+
+  .contest__container {
+    border: 0;
+  }
+
 }
 
 @media #{$min-tablet-widths} {
@@ -116,6 +143,10 @@
     line-height: 1.66666667;
     margin: 0 auto;
     max-width: 500px;
+  }
+
+  .contest__form-legend br {
+    display: none;
   }
 
   .contest__fullname {
