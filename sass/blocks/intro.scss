@@ -2,7 +2,15 @@
   background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-size: cover;
   margin-top: -66px;
-  padding-top: 174px;
+  padding-top: 96px;
+
+  &:not(&--index) {
+    padding-bottom: 55px;
+  }
+
+  &--index {
+    padding-top: 174px;
+  }
 }
 
 .intro__title {
@@ -10,6 +18,8 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
+  margin: 0 auto;
+  max-width: 280px;
   text-align: center;
 }
 
@@ -44,12 +54,21 @@
 @media #{$min-tablet-widths} {
   .intro {
     margin-top: -110px;
-    padding-top: 200px;
+    padding-top: 178px;
+
+    &:not(&--index) {
+      padding-bottom: 80px;
+    }
+
+    &--index {
+      padding-top: 200px;
+    }
   }
 
   .intro__title {
     font-size: 50px;
     line-height: 1.2;
+    max-width: 475px;
   }
 
   .intro__container {
@@ -100,7 +119,19 @@
 
 @media #{$min-desktop-widths} {
   .intro {
-    padding-top: 218px;
+    padding-top: 173px;
+
+    &:not(&--index) {
+      padding-bottom: 101px;
+    }
+
+    &--index {
+      padding-top: 218px;
+    }
+  }
+
+  .intro__title {
+    max-width: none;
   }
 
   .intro__downloading-slogan {
