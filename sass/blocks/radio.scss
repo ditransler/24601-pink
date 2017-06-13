@@ -4,14 +4,14 @@
 
 .radio__input {
   border: 0;
-  height: 36px;
+  height: 40px;
   margin: 0;
   opacity: 0;
   outline: 0;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 36px;
+  width: 40px;
 }
 
 .radio__label {
@@ -26,12 +26,12 @@
     border: 2px solid #e5e5e5;
     border-radius: 50%;
     content: "";
-    height: 36px;
+    height: 40px;
     left: 0;
-    margin-top: -18px;
+    margin-top: -20px;
     position: absolute;
     top: 50%;
-    width: 36px;
+    width: 40px;
 
     .radio__input:focus + & {
       box-shadow: 0 0 0 1px rgba($brand-color, 0.5);
@@ -53,7 +53,7 @@
     content: "";
     display: none;
     height: 15px;
-    left: 10px;
+    left: 12px;
     position: absolute;
     top: 5px;
     width: 15px;
