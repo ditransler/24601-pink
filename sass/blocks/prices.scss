@@ -1,7 +1,7 @@
 .prices {
   background-color: $secondary-bg-color;
+  min-height: 447px;
   padding: 66px 0 47px;
-  outline: 1px solid red;
 }
 
 .prices__plan-header {
@@ -35,4 +35,33 @@
 .prices__feature-name {
   line-height: 2.14285714;
   text-transform: uppercase;
+}
+
+.prices__slider-bullets {
+  font-size: 0;
+  height: 12px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 62px;
+}
+
+@media #{$min-tablet-widths} {
+  .prices {
+    min-height: 325px;
+  }
+
+  .prices__container {
+    @include container();
+  }
+
+  .prices__slider-bullets {
+    display: none;
+  }
+}
+
+@media #{$min-desktop-widths} {
+  .prices {
+    min-width: 442px;
+  }
 }

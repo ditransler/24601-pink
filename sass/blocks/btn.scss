@@ -7,4 +7,12 @@
     line-height: 1;
     text-transform: uppercase;
   }
+
+  &--downloading {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+  }
 }

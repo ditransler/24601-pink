@@ -17,3 +17,33 @@
     @content;
   }
 }
+
+@mixin container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 320px;
+
+  @media #{$min-tablet-widths} {
+    width: 660px;
+  }
+
+  @media #{$min-desktop-widths} {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 960px;
+  }
+}
+
+/* Does the same thing as the standalone block with the same name */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
