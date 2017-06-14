@@ -148,6 +148,7 @@
   .contest__container {
     max-width: 620px;
 
+    .contest__header &,
     .contest__fullname &,
     .contest__form-footer & {
       max-width: none;
@@ -299,6 +300,10 @@
 }
 
 @media #{$min-desktop-widths} {
+  .contest {
+    padding-bottom: 0;
+  }
+
   .contest__subtitle {
     max-width: 760px;
   }
@@ -309,19 +314,66 @@
   }
 
   .contest__fullname {
+    margin-bottom: 0;
+    order: 1;
+    padding-top: 84px;
     width: 50%;
+
+    .contest__container {
+      padding-left: 35px;
+      padding-right: 35px;
+      width: auto;
+    }
+
+    .contest__form-group {
+      justify-content: flex-end;
+    }
+
+    .contest__form-input {
+      max-width: 340px;
+
+      &[name="first-name"] {
+        max-width: 380px;
+      }
+    }
   }
 
   .contest__travel-achievements {
     width: 100%;
+
+    .contest__container {
+      padding-left: 58px;
+      padding-right: 58px;
+      max-width: none;
+      width: 940px;
+    }
   }
 
   .contest__contacts {
+    padding-top: 56px;
     width: 100%;
-  }
 
-  .contest__contacts  .contest__form-group {
-    width: 45.6%;
+    .contest__container {
+      /**
+        Had to use zero font-size and 'display: inline-flex' for .contest__form-group
+        because of a unresolved bug in Blink with setting 'display: flex' on the fieldset tag
+      **/
+      font-size: 0;
+      max-width: none;
+      padding-bottom: 13px;
+      padding-top: 34px;
+      width: 940px;
+    }
+
+    .contest__form-group {
+      display: inline-flex;
+      width: 45.6%;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 71px;
+      }
+    }
   }
 
   .contest__checkboxes-list {
@@ -329,16 +381,54 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 1px;
-    justify-content: space-between;
     margin: 0;
-    min-height: 60px;
+    margin-left: -55px;
+    min-height: 220px;
+    padding-bottom: 8px;
+  }
+
+  .contest__checkboxes-item {
+    margin-left: 55px;
   }
 
   .contest__app-platform {
+    order: 2;
+    padding: 70px 35px 0;
     width: 50%;
+
+    .contest__container {
+      margin: 0;
+      max-width: 435px;
+      padding-left: 0;
+      padding-right: 0;
+      width: auto;
+    }
+  }
+
+  .contest__radios-list {
+    margin-left: 0;
+    padding-left: 74px;
+    padding-top: 51px;
   }
 
   .contest__emotions {
+    padding-bottom: 0;
     width: 100%;
+
+    .contest__container {
+      padding-bottom: 36px;
+      padding-top: 34px;
+      max-width: none;
+      width: 940px;
+    }
+  }
+
+  .textarea {
+    max-width: none;
+    min-height: 128px;
+  }
+
+  .contest__form-footer {
+    padding-top: 65px;
   }
 }
