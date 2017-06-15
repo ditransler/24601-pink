@@ -173,7 +173,7 @@
         <header class="photo-upload__header">
           <div class="photo-upload__container">
             <h2 class="photo-upload__title visually-hidden">Загрузка своих фотографий</h2> <!-- accessibly hidden -->
-            <p class="photo-upload__subtitle">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+            <p class="photo-upload__subtitle">Затмите их всех! <br> Выкладывайте все, что накопилось&nbsp;в телефоне!</p>
           </div>
         </header>
         <form class="photo-upload__form" id="photo-upload-form" name="photo-upload-form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
@@ -183,21 +183,33 @@
             </div>
             <div class="photo-upload__edit">
               <div class="photo-upload__edit-controls">
-                <button class="photo-upload__edit-btn photo-upload__edit-btn--crop photo-upload__edit-btn--active" type="button">Обрезать</button>
-                <button class="photo-upload__edit-btn photo-upload__edit-btn--fill" type="button">Залить</button>
-                <button class="photo-upload__edit-btn photo-upload__edit-btn--contrast" type="button">Изменить контрастность</button>
+                <button class="photo-upload__edit-btn photo-upload__edit-btn--crop btn photo-upload__edit-btn--active" type="button">Обрезать</button>
+                <button class="photo-upload__edit-btn photo-upload__edit-btn--fill btn" type="button">Залить</button>
+                <button class="photo-upload__edit-btn photo-upload__edit-btn--contrast btn" type="button">Изменить контрастность</button>
               </div>
               <div class="photo-upload__edit-sliders">
-                  <div class="photo-upload__edit-slider range-slider">
+                  <div class="photo-upload__edit-slider photo-upload__edit-slider--crop range-slider">
                     <div class="range-slider__scale">
                       <div class="range-slider__bar"></div>
                     </div>
-                    <div class="range-slider__handle"></div>
+                    <div class="photo-upload__edit-slider-handle range-slider__handle"></div>
+                  </div>
+                  <div class="photo-upload__edit-slider photo-upload__edit-slider--fill range-slider">
+                    <div class="range-slider__scale">
+                      <div class="range-slider__bar"></div>
+                    </div>
+                    <div class="photo-upload__edit-slider-handle range-slider__handle"></div>
+                  </div>
+                  <div class="photo-upload__edit-slider photo-upload__edit-slider--contrast range-slider">
+                    <div class="range-slider__scale">
+                      <div class="range-slider__bar"></div>
+                    </div>
+                    <div class="photo-upload__edit-slider-handle range-slider__handle"></div>
                   </div>
               </div>
               <div class="photo-upload__form-buttons">
-                <button class="photo-upload__submit" type="submit">Запостить</button>
-                <button class="photo-upload__reset" type="reset" disabled>Отмена</button>
+                <button class="photo-upload__submit btn" type="submit">Запостить</button>
+                <button class="photo-upload__reset btn" type="reset">Отмена</button>
               </div>
             </div>
           </div>

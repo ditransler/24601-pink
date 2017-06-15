@@ -1,5 +1,5 @@
 .photo-upload {
-  padding-top: 27px;
+  padding-top: 24px;
 }
 
 .photo-upload__container {
@@ -7,12 +7,14 @@
 }
 
 .photo-upload__header {
-  margin-bottom: 49px;
+  margin-bottom: 41px;
 }
 
 .photo-upload__subtitle {
   line-height: 2.14285714;
   text-align: center;
+  margin: 0 auto;
+  max-width: 260px;
 }
 
 .photo-upload__form {
@@ -22,7 +24,54 @@
 }
 
 .photo-upload__preview {
-  margin-bottom: 35px;
+  margin-bottom: 41px;
+
+  img {
+    display: block;
+  }
+}
+
+.photo-upload__edit-controls {
+  align-items: center;
+  display: flex;
+  margin: 0 auto 34px;
+  max-width: 212px;
+}
+
+.photo-upload__edit-btn {
+  background-repeat: no-repeat;
+  flex: none;
+  font-size: 0;
+
+  &--crop {
+    background-image: url("../img/icon-editor-crop.svg");
+    height: 44px;
+    margin-right: 36px;
+    width: 44px;
+  }
+
+  &--fill {
+    background-image: url("../img/icon-editor-fill.svg");
+    height: 43px;
+    margin-right: 40px;
+    width: 48px;
+  }
+
+  &--contrast {
+    background-image: url("../img/icon-editor-contrast.svg");
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.photo-upload__edit-sliders {
+  border-bottom: 1px solid rgba($main-dark-color, 0.1);
+}
+
+.photo-upload__edit-slider-handle {
+  .photo-upload__edit-slider & {
+    left: 79%;
+  }
 }
 
 .photo-upload__form-buttons  {
@@ -30,17 +79,63 @@
   padding-top: 38px;
 }
 
-.photo-upload__submit {
-  color: $brand-color;
+.photo-upload__submit,
+.photo-upload__reset {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 30px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
+  padding: 14px 31px 17px;
+  width: 100%;
+}
+
+.photo-upload__submit {
+  border-color: $brand-color;
+  color: $brand-color;
+  margin-bottom: 12px;
+
+  &:hover {
+    background-color: $brand-color;
+    color: #fff;
+  }
+
+  &:active {
+    color: rgba(#fff, 0.3);
+  }
 }
 
 .photo-upload__reset {
+  border-color: rgba($main-dark-color, 0.1);
   color: rgba($main-dark-color, 0.1);
-  font-size: 18px;
-  font-weight: 700;
+
+  &:hover {
+    border-color: rgba($main-dark-color, 0.3);
+    color: rgba($main-dark-color, 0.3);
+  }
+
+  &:active {
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+    color: rgba(#fff, 0.3);
+  }
+}
+
+@media #{$max-tablet-widths} {
+  .photo-upload__edit-sliders {
+    margin: 0 -20px;
+    padding-bottom: 28px;
+  }
+  .photo-upload__edit-slider--crop {
+    margin: 0 auto;
+    width: 244px;
+  }
+
+  .photo-upload__edit-slider--fill,
+  .photo-upload__edit-slider--contrast {
+    display: none;
+  }
 }
 
 @media #{$min-tablet-widths} {
