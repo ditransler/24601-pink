@@ -118,6 +118,14 @@
 }
 
 @media #{$min-tablet-widths} {
+  .photos {
+    padding-top: 92px;
+  }
+
+  .photos__header {
+    margin-bottom: 76px;
+  }
+
   .photos__subtitle {
     font-size: 18px;
     line-height: 1.66666667;
@@ -133,14 +141,74 @@
 
   .photos__item {
     display: flex;
+    min-height: 455px;
     flex-direction: column;
     width: 48.4%;
 
     &--panorama {
       flex: none;
-      min-height: 630px;
+      margin-bottom: 50px;
       width: 100%;
+
+      .photos__comment {
+        margin-bottom: 0;
+      }
     }
+  }
+
+  .photos__thumb {
+    height: 1px;
+    min-height: 300px;
+
+    img {
+      height: 100%;
+    }
+
+    .photos__item--panorama & {
+      min-height: 509px;
+    }
+  }
+
+  .photos__item-info {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 24px 27px 29px;
+
+    .photos__item--panorama & {
+      padding: 24px 27px 25px;
+      position: relative;
+    }
+  }
+
+  .photos__likes {
+    justify-content: space-between;
+    margin-top: auto;
+
+    .photos__item--panorama & {
+      justify-content: flex-start;
+      right: 29px;
+      position: absolute;
+      top: 31px;
+    }
+  }
+
+  .photos__likes-counter {
+    order: 1;
+  }
+
+  .photos__likes-btn {
+    margin-right: 5px;
+    order: 2;
+
+    .photos__item--panorama & {
+      margin-left: 17px;
+      margin-right: 0;
+    }
+  }
+
+  .photos__item-label {
+    top: 57px;
   }
 }
 
