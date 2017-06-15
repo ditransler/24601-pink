@@ -1,5 +1,5 @@
 .photos {
-  padding-top: 53px;
+  padding-top: 45px;
 }
 
 .photos__container {
@@ -7,11 +7,13 @@
 }
 
 .photos__header {
-  margin-bottom: 55px;
+  margin-bottom: 49px;
 }
 
 .photos__subtitle {
   line-height: 2.14285714;
+  margin: 0 auto;
+  max-width: 250px;
   text-align: center;
 }
 
@@ -19,7 +21,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 50px;
 }
 
 .photos__item {
@@ -46,6 +47,7 @@
 
 .photos__item-info {
   background-color: $secondary-bg-color;
+  padding: 18px 17px 26px;
 }
 
 .photos__item-label {
@@ -54,15 +56,21 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 2;
+  min-width: 140px;
+  padding: 6px 5px;
   position: absolute;
   right: 0;
+  text-align: center;
   text-transform: uppercase;
   top: 0;
 }
 
 .photos__author {
+  font-weight: 700;
+  margin: 0;
+
   b {
-    font-weight: 700;
+    font-weight: inherit;
   }
 }
 
@@ -83,6 +91,23 @@
   &::after {
     content: ")";
   }
+}
+
+.photos__comment {
+  margin: 0 0 16px;
+}
+
+.photos__likes {
+  display: flex;
+}
+
+.photos__likes-btn {
+  background: url("../img/icon-heart.svg") no-repeat;
+  flex: none;
+  font-size: 0;
+  height: 12px;
+  margin-right: 19px;
+  width: 13px;
 }
 
 .photos__likes-counter {
