@@ -213,15 +213,41 @@
 }
 
 @media #{$min-desktop-widths} {
+  .photos__header {
+    margin-bottom: 88px;
+  }
+
   .photos__subtitle {
     max-width: 575px;
   }
 
   .photos__item {
+    margin-bottom: 54px;
+    min-height: 555px;
     width: 31.9%;
 
     &--panorama {
+      margin-bottom: 50px;
       width: 100%;
+    }
+  }
+
+  .photos__thumb {
+    min-height: 400px;
+
+    .photos__item--panorama & {
+      min-height: 506px;
+    }
+  }
+
+  .photos__item-label {
+    top: 54px;
+  }
+
+  .photos__item-info {
+
+    .photos__item--panorama & {
+      padding-bottom: 24px;
     }
   }
 }
