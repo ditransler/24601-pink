@@ -4,12 +4,16 @@
   margin-top: -66px;
   padding-top: 96px;
 
-  &:not(&--index) {
+  &--index {
+    padding-top: 174px;
+  }
+
+  &--form {
     padding-bottom: 55px;
   }
 
-  &--index {
-    padding-top: 174px;
+  &--photo {
+    padding-bottom: 83px;
   }
 }
 
@@ -56,12 +60,16 @@
     margin-top: -110px;
     padding-top: 178px;
 
-    &:not(&--index) {
+    &--index {
+      padding-top: 200px;
+    }
+
+    &--form {
       padding-bottom: 80px;
     }
 
-    &--index {
-      padding-top: 200px;
+    &--photo {
+      padding-bottom: 140px;
     }
   }
 
@@ -121,17 +129,25 @@
   .intro {
     padding-top: 173px;
 
-    &:not(&--index) {
+    &--index {
+      padding-top: 218px;
+    }
+
+    &--form {
       padding-bottom: 101px;
     }
 
-    &--index {
-      padding-top: 218px;
+    &--photo {
+      padding-bottom: 101px;
     }
   }
 
   .intro__title {
     max-width: none;
+
+    .intro--photo & {
+      max-width: 500px;
+    }
   }
 
   .intro__downloading-slogan {
