@@ -9,14 +9,14 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container">
-        <nav class="main-menu">
+      <nav class="main-menu main-menu--opened">
+        <div class="page-header__container">
           <div class="main-menu__header">
             <a class="main-menu__logo main-logo">
               <!-- img will be replaced with picture or inline SVG -->
-              <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип PINK">
             </a>
-            <button class="main-menu__toggle" type="button" title="Открыть/закрыть меню">
+            <button class="main-menu__toggle btn" type="button" title="Открыть/закрыть меню">
               <span>Открыть/закрыть меню</span>
             </button>
           </div>
@@ -34,12 +34,12 @@
               <a class="main-menu__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на сайт HTML Academy" target="_blank">HTML Academy</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
 
     <main class="page-main">
-      <div class="intro">
+      <div class="intro intro--index">
         <div class="intro__container">
           <h1 class="intro__title visually-hidden">Мобильное приложение Pink</h1> <!-- accessibly hidden! -->
           <div class="intro__device-preview">
@@ -59,7 +59,7 @@
                     <a class="available-platforms__link available-platforms__link--android" href="https://play.google.com/store/apps" title="Скачать на Google Play" target="_blank">Google Play</a>
                   </li>
                   <li class="available-platforms__item">
-                    <a class="available-platforms__link available-platforms__link--windows" href="https://www.microsoft.com/ru-ru/store/apps" title="Скачать в магазине Microsoft" target="_blank">Магазин Microsoft</a>
+                    <a class="available-platforms__link available-platforms__link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps" title="Скачать в магазине Microsoft" target="_blank">Магазин Microsoft</a>
                   </li>
                 </ul>
                 <p class="available-platforms__note">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -80,21 +80,21 @@
           <div class="features__items">
             <div class="features__container">
               <ul class="features__list">
-                <li class="features__item">
+                <li class="features__item features__item--mood">
                   <p class="features__item-title">
                     <strong>Поднимает настроение</strong>
                   </p>
-                  <p class="features__item-description">Приложение позволит вам победить осеннюю хандру и депрессию
+                  <p class="features__item-description">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию
                     буквально в несколько кликов!</p>
                 </li>
-                <li class="features__item">
+                <li class="features__item features__item--change">
                   <p class="features__item-title">
                     <strong>Меняет мир вокруг</strong>
                   </p>
                   <p class="features__item-description">Сделайте снимок и украсьте его смайликом или текстовой подписью,
-                    чтобы усилить эффект</p>
+                    чтобы усилить&nbsp;эффект</p>
                 </li>
-                <li class="features__item">
+                <li class="features__item features__item--share">
                   <p class="features__item-title">
                     <strong>Заводит новых друзей</strong>
                   </p>
@@ -111,7 +111,7 @@
             <div class="features__container">
               <div class="features__research-content">
                 <p class="features__research-title"><b>Эффект <br> на 24 часа!</b></p>
-                <p class="features__research-description">Британские ученые провели исследовани и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                <p class="features__research-description">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
                 <a class="features__research-more" href="#" title="Перейти на страницу с исследованием">Узнать больше об исследовании</a>
               </div>
             </div>
@@ -136,7 +136,7 @@
                 </blockquote>
               </div>
               <ul class="testimonials__slider-bullets">
-                <li class="testimonials__slider-bullet">
+                <li class="testimonials__slider-bullet testimonials__slider-bullet--active">
                   <button class="testimonials__slider-bullet-btn btn" type="button" title="Отзыв №1">1</button>
                 </li>
                 <li class="testimonials__slider-bullet">
@@ -155,78 +155,77 @@
         <div class="prices__container">
           <h2 class="prices__title visually-hidden">Тарифы на использование приложения</h2> <!-- accessibly hidden! -->
           <div class="prices__slider-wrapper">
-            <div class="prices__list">
+            <div class="prices__slider-list">
               <table class="prices__plan">
                 <thead class="prices__plan-header">
-                  <tr class="prices__plan-row">
-                    <th class="prices__plan-cell">&nbsp;</th>
-                    <th class="prices__plan-cell">
-                      <p class="prices__plan-title"><b>База</b></p>
-                      <span class="prices__plan-value">1,99 USD</span>
-                    </th>
-                    <th class="prices__plan-cell">
-                      <span class="prices__plan-label">Хит</span>
-                      <p class="prices__plan-title"><b>Стандарт</b></p>
-                      <span class="prices__plan-value">3,99 USD</span>
-                    </th>
-                    <th class="prices__plan-cell">
-                      <p class="prices__plan-title"><b>Анлим</b></p>
-                      <span class="prices__plan-value">9,99 USD</span>
-                    </th>
-                  </tr>
+                <tr class="prices__plan-row">
+                  <th class="prices__plan-cell">&nbsp;</th>
+                  <th class="prices__plan-cell">
+                    <p class="prices__plan-title"><b>База</b></p>
+                    <span class="prices__plan-value">1,99 USD</span>
+                  </th>
+                  <th class="prices__plan-cell prices__plan-cell--hit" data-title="Хит">
+                    <p class="prices__plan-title"><b>Стандарт</b></p>
+                    <span class="prices__plan-value">3,99 USD</span>
+                  </th>
+                  <th class="prices__plan-cell">
+                    <p class="prices__plan-title"><b>Анлим</b></p>
+                    <span class="prices__plan-value">9,99 USD</span>
+                  </th>
+                </tr>
                 </thead>
                 <tbody class="prices__plan-features">
-                  <tr class="prices__plan-row">
-                    <td class="prices__plan-cell">
-                      <span class="prices__feature-name">Розовый фильтр</span>
-                    </td>
-                    <td class="prices__plan-cell">
-                      <span class="prices__feature-name">Розовый фильтр</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </td>
-                    <td class="prices__plan-cell">
-                      <span class="prices__feature-name">Розовый фильтр</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </td>
-                    <td class="prices__plan-cell">
-                      <span class="prices__feature-name">Розовый фильтр</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </td>
-                  </tr>
-                  <tr class="prices__plan-row">
-                    <td class="prices__plan-cell">
-                      <span class="prices__feature-name">Смайлики</span>
-                    </td>
-                    <td>
-                      <span class="prices__feature-name">Смайлики</span>
-                      <span class="prices__feature-support prices__feature-support--no"> - нет</span>
-                    </td>
-                    <td>
-                      <span class="prices__feature-name">Смайлики</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </td>
-                    <td>
-                      <span class="prices__feature-name">Смайлики</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </td>
-                  </tr>
-                  <tr class="prices__plan-row">
-                    <td class="prices__plan-cell">
-                      <span class="prices__feature-name">Комментарии</span>
-                    </td>
-                    <td>
-                      <span class="prices__feature-name">Комментарии</span>
-                      <span class="prices__feature-support prices__feature-support--no"> - нет</span>
-                    </td>
-                    <td>
-                      <span class="prices__feature-name">Комментарии</span>
-                      <span class="prices__feature-support prices__feature-support--no"> - нет</span>
-                    </td>
-                    <td>
-                      <span class="prices__feature-name">Комментарии</span>
-                      <span class="prices__feature-support prices__feature-support--yes"> - да</span>
-                    </td>
-                  </tr>
+                <tr class="prices__plan-row">
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Розовый фильтр</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Розовый фильтр</span>
+                    <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Розовый фильтр</span>
+                    <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Розовый фильтр</span>
+                    <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                  </td>
+                </tr>
+                <tr class="prices__plan-row">
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Смайлики</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Смайлики</span>
+                    <span class="prices__feature-support prices__feature-support--no"> - нет</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Смайлики</span>
+                    <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Смайлики</span>
+                    <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                  </td>
+                </tr>
+                <tr class="prices__plan-row">
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Комментарии</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Комментарии</span>
+                    <span class="prices__feature-support prices__feature-support--no"> - нет</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Комментарии</span>
+                    <span class="prices__feature-support prices__feature-support--no"> - нет</span>
+                  </td>
+                  <td class="prices__plan-cell">
+                    <span class="prices__feature-name">Комментарии</span>
+                    <span class="prices__feature-support prices__feature-support--yes"> - да</span>
+                  </td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -234,7 +233,7 @@
               <li class="prices__slider-bullet">
                 <button class="prices__slider-bullet-btn btn" type="button" title="Отзыв №1">1</button>
               </li>
-              <li class="prices__slider-bullet">
+              <li class="prices__slider-bullet prices__slider-bullet--active">
                 <button class="prices__slider-bullet-btn btn" type="button" title="Отзыв №2">2</button>
               </li>
               <li class="prices__slider-bullet">
@@ -245,22 +244,24 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="contacts__container">
-          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <p class="contacts__item-label"><b>Звоните:</b></p>
-              <a class="contacts__item-value contacts__item-value--link" href="tel:88125556666" title="Позвонить в службу поддержки">+7 (812) 555-66-66</a>
-            </li>
-            <li class="contacts__item">
-              <p class="contacts__item-label"><b>Пишите:</b></p>
-              <a class="contacts__item-value contacts__item-value--link" href="mailto:mail@htmlacademy.ru" title="Написать в службу поддержки">mail@htmlacademy.ru</a>
-            </li>
-            <li class="contacts__item">
-              <p class="contacts__item-label"><b>Приезжайте в гости:</b></p>
-              <p class="contacts__item-value">ул. Большая Конюшенная, 19/8</p>
-            </li>
-          </ul>
+        <div class="contacts__wrapper">
+          <div class="contacts__container">
+            <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <p class="contacts__item-label"><b>Звоните:</b></p>
+                <a class="contacts__item-value contacts__item-value--link" href="tel:88125556666" title="Позвонить в службу поддержки">+7 (812) 555-66-66</a>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-label"><b>Пишите:</b></p>
+                <a class="contacts__item-value contacts__item-value--link" href="mailto:mail@htmlacademy.ru" title="Написать в службу поддержки">mail@htmlacademy.ru</a>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-label"><b>Приезжайте в гости:</b></p>
+                <p class="contacts__item-value">ул. Большая Конюшенная, 19/8</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="contacts__map" id="contacts-map"></div>
       </section>
@@ -270,17 +271,17 @@
       <div class="page-footer__container">
         <a class="page-footer__logo main-logo" href="index.html" title="Вернуться на Главную">
           <!-- img will be replaced with picture or inline SVG -->
-          <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип PINK">
         </a>
-        <div class="page-footer__socials social-links">
-          <a class="social‐link  social‐link‐‐vk" href="#" title="Мы вКонтакте" target="_blank">Vkontakte</a>
-          <a class="social‐link  social‐link‐‐fb" href="#" title="Мы в Фейсбук" target="_blank">Facebook</a>
-          <a class="social‐link  social‐link‐‐yt" href="#" title="Мы на Ютуб" target="_blank">Youtube</a>
+        <div class="page-footer__socials">
+          <a class="social-link social-link--tw" href="#" title="Мы в Твиттер" target="_blank">Twitter</a>
+          <a class="social-link social-link--fb" href="#" title="Мы в Фейсбук" target="_blank">Facebook</a>
+          <a class="social-link social-link--yt" href="#" title="Мы на Ютуб" target="_blank">Youtube</a>
         </div>
         <div class="page-footer__developers">
-          Разработано:
+          <span class="page-footer__developers-label">Разработано:</span>
           <a class="page-footer__developers-link" href="https://htmlacademy.ru/intensive/adaptive" title="Продвинутый интенсив HTML Academy" target="_blank">
-            <img src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>

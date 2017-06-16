@@ -1,8 +1,79 @@
-.available-platforms__note {
-  color: #fff;
-  font-weight: 300;
+.available-platforms {
+  padding-top: 31px;
+}
+
+.available-platforms__list {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 auto 25px;
+  max-width: 205px;
+  padding: 0;
+}
+
+.available-platforms__item {
+  flex: none;
 }
 
 .available-platforms__link {
+  background-repeat: no-repeat;
   color: #fff;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+    height: 56px;
+    width: 47px;
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+    height: 47px;
+    width: 43px;
+  }
+
+  &--microsoft {
+    background-image: url("../img/logo-microsoft.svg");
+    height: 41px;
+    width: 44px;
+  }
+}
+
+.available-platforms__note {
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+@media #{$min-tablet-widths} {
+  .available-platforms {
+    padding-top: 43px;
+  }
+
+  .available-platforms__list {
+    margin-bottom: 40px;
+  }
+
+  .available-platforms__link--android {
+    opacity: 0.4;
+  }
+
+  .available-platforms__note {
+    font-size: 18px;
+    line-height: 1.33333333;
+  }
+}
+
+@media #{$min-desktop-widths} {
+  .available-platforms {
+    padding-top: 65px;
+  }
+
+  .available-platforms__list {
+    margin-bottom: 57px;
+  }
 }

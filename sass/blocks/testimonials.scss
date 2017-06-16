@@ -1,5 +1,17 @@
 .testimonials {
-  padding: 45px 0;
+  padding: 43px 0;
+  position: relative;
+
+  &::after {
+    background: url("../img/bg-triangle-white.svg") 0 0 no-repeat;
+    background-size: contain;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 26px;
+    top: 100%;
+    width: 100%;
+  }
 }
 
 .testimonials__container {
@@ -7,12 +19,15 @@
 }
 
 .testimonials__item {
+  margin: 0;
   text-align: center;
 }
 
 .testimonials__author {
   color: #000;
+  display: block;
   font-style: normal;
+  margin-bottom: 13px;
 }
 
 .testimonials__author-name {
@@ -29,48 +44,155 @@
 
 .testimonials__item-text {
   line-height: 2.14285714;
+  margin: 0;
+
+  &::before {
+    content: "\00ab";
+  }
+
+  &::after {
+    content: "\00bb";
+  }
 }
 
 .testimonials__slider-bullets {
   font-size: 0;
   height: 12px;
   list-style: none;
-  margin: 0 auto;
+  margin: 33px auto 0;
   padding: 0;
-  width: 62px;
+  text-align: center;
+}
+
+.testimonials__slider-bullet {
+  display: inline-block;
+  height: 12px;
+  vertical-align: middle;
+  width: 12px;
+
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+.testimonials__slider-bullet-btn {
+  background-color: rgba($main-dark-color, 0.3);
+  background-clip: content-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba($main-dark-color, 0.6);
+  }
+
+  &:active {
+    background-color: rgba($main-dark-color, 0.1);
+  }
+
+  .testimonials__slider-bullet--active & {
+    background-color: #fff;
+    border-color: $main-dark-color;
+    cursor: default;
+  }
 }
 
 @media #{$min-tablet-widths} {
+  .testimonials {
+    padding-bottom: 21px;
+    padding-top: 29px;
+
+    &::after {
+      height: 51px;
+    }
+  }
   .testimonials__item {
     display: flex;
     flex-direction: column;
   }
 
   .testimonials__author {
-    font-size: 20px;
+    margin-bottom: 0;
     order: 2;
+    text-align: center;
   }
 
-  .testimonials__author-info {
-    font-size: 18px;
+  .testimonials__author-name {
+    font-size: 20px;
+    display: block;
+    margin: 0 0 5px;
   }
 
   .testimonials__item-text {
     font-size: 18px;
     line-height: 1.66666667;
+    margin-bottom: 33px;
     order: 1;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .testimonials__slider-bullets {
+    margin-top: 36px;
   }
 }
 
-@media (max-width: 1199px) {
+@media #{$max-desktop-widths} {
   .testimonials__slider-arrow {
     display: none;
   }
 }
 
 @media #{$min-desktop-widths} {
-  .testimonials__item-text {
+  .testimonials {
+    padding-bottom: 44px;
+    padding-top: 75px;
+
+    &::after {
+      height: 100px;
+    }
+  }
+
+  .testimonials__list {
+    padding-top: 110px;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 63px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 0;
+      width: 79px;
+
+      outline: 1px solid red;
+    }
+  }
+
+  .testimonials__item {
+    margin: 0 auto;
     max-width: 680px;
+  }
+
+  .testimonials__item-text {
+    margin-bottom: 36px;
+  }
+
+  .testimonials__author-name {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  .testimonials__author-info {
+    font-size: 18px;
+    line-height: 1.66666667;
   }
 
   .testimonials__slider-bullets {
@@ -82,19 +204,32 @@
   }
 
   .testimonials__slider-arrow {
+    border-bottom: 2px solid rgba($main-dark-color, 0.3);
     font-size: 0;
-    height: 41px;
+    height: 31px;
+    margin-top: 5px;
     position: absolute;
     top: 50%;
-    transform: translateX(-50%);
-    width: 22px;
+    width: 31px;
 
     &--prev {
-      left: 0;
+      border-left: 2px solid rgba($main-dark-color, 0.3);
+      left: -5px;
+      transform: rotate(45deg) translateY(-50%);
     }
 
     &--next {
-      right: 0;
+      border-right: 2px solid rgba($main-dark-color, 0.3);
+      right: -5px;
+      transform: rotate(-45deg) translateY(-50%);
+    }
+
+    &:hover {
+      border-color: rgba($main-dark-color, 0.6);
+    }
+
+    &:active {
+      border-color: rgba($main-dark-color, 0.1);
     }
   }
 }

@@ -1,0 +1,39 @@
+.range-slider {
+  height: 14px;
+  position: relative;
+}
+
+.no-js .range-slider {
+  display: none;
+}
+
+.range-slider__scale {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 2px;
+  margin-top: -1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.range-slider__bar {
+  background-color: $main-dark-color;
+  height: 2px;
+}
+
+.range-slider__handle {
+  background: #fff;
+  border: 2px solid $brand-color;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 14px;
+  left: 0;
+  margin-top: -7px;
+  position: absolute;
+  top: 50%;
+  width: 14px;
+
+  &:hover {
+    background-color: $brand-color;
+  }
+}

@@ -1,55 +1,129 @@
 .main-menu {
-  min-height: 326px;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &--opened {
+    background-color: #283645;
+  }
 }
 
 .main-menu__header {
-  height: 71px;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
 
-  padding: 20px;
+  padding: 22px 20px 24px;
+}
+
+.main-menu__logo {
+  height: 22px;
+  width: 75px;
+}
+
+.main-menu__toggle {
+  background: url("../img/icon-menu-burger.svg") no-repeat;
+  font-size: 0;
+  height: 24px;
+  width: 50px;
+
+  .main-menu--opened & {
+    background-image: url("../img/icon-menu-cross.svg");
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .main-menu__list {
   list-style: none;
   margin: 0;
   padding: 0;
-
-  min-height: 255px;
+  text-align: center;
 }
 
 .main-menu__item {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid rgba(#fff, 0.15);
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.77777778;
-  padding: 17px 20px;
+  padding: 15px 20px;
   text-transform: uppercase;
+
+  &:not(&--active):hover {
+    color: $brand-color;
+  }
+
+  &:not(&--active):active {
+    color: rgba($brand-color, 0.3);
+  }
+
+  &--active {
+    cursor: default;
+  }
 }
 
 .main-menu__link {
   color: inherit;
   text-decoration: none;
+
+  .main-menu__item--active & {
+    border-bottom: 2px solid currentColor;
+  }
 }
 
 @media #{$min-tablet-widths} {
   .main-menu__header {
-    height: 111px;
+    align-items: flex-end;
+    padding-bottom: 43px;
+    padding-top: 27px;
+  }
+
+  .main-menu__logo {
+    height: 40px;
+    width: 147px;
   }
 }
 
 @media #{$min-desktop-widths} {
   .main-menu {
-    display: flex;
-    min-height: 110px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 28px 0 42px;
   }
 
   .main-menu__header {
-    width: 150px;
-    min-height: 110px;
+    border: 0;
+    flex: none;
+    padding: 0;
+    width: 147px;
   }
 
   .main-menu__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     margin-left: auto;
-    min-height: 110px;
-    width: 630px;
+    padding-top: 9px;
+    width: 621px;
+  }
+
+  .main-menu__item {
+    border: 0;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0;
+    text-transform: none;
+
+    &:not(&--active):active {
+      color: rgba(#fff, 0.3);
+    }
+
+    &--active .main-menu__link {
+      padding-bottom: 3px;
+    }
+  }
+
+  .main-menu__toggle {
+    display: none;
   }
 }

@@ -1,13 +1,27 @@
 .textarea {
+  border: 2px solid #e5e5e5;
   color: $main-dark-color;
   font-family: $base-font-family;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.66666667;
+  max-width: 280px;
+  min-height: 201px;
+  padding: 14px 18px;
+  width: 100%;
 
   @include placeholder {
     color: inherit;
     opacity: 1;
+  }
+
+  &:hover {
+    border-color: $main-dark-color;
+  }
+
+  &:focus {
+    border-color: $brand-color;
+    outline: 0;
   }
 }

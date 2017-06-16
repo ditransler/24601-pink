@@ -1,18 +1,68 @@
 .btn {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
   &--confirm {
     background-color: $confirm-color;
+    border-radius: 3px;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
+    min-width: 280px;
+    padding: 23px 40px 22px;
     text-transform: uppercase;
+
+    &:hover {
+      background-color: $confirm-color--hover;
+    }
+
+    &:active {
+      color: rgba(#fff, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   &--downloading {
+    border: 3px solid #fff;
+    border-radius: 30px;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
-    text-decoration: none;
+    padding: 14px 31px 17px;
+    width: 100%;
+
+    &:hover {
+      background: #fff;
+      color: $brand-color;
+    }
+
+    &:active {
+      color: rgba($brand-color, 0.3);
+    }
+  }
+}
+
+@media #{$min-desktop-widths} {
+  .btn--downloading {
+    font-size: 21px;
+    padding: 14px 21px;
   }
 }

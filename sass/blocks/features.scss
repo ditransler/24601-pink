@@ -1,48 +1,85 @@
-.features {
-  min-height: 1002px;
-}
-
 .features__container {
   @include container();
-  height: 100%;
 }
 
 .features__header {
   font-size: 24px;
   font-weight: 300;
-  height: 1px;
   line-height: 1.2;
-  min-height: 249px;
-  padding: 0;
+  padding: 41px 0 31px;
+  position: relative;
+
+  &::after {
+    background: url("../img/bg-triangle-white.svg") 0 100% no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 31px;
+    top: 100%;
+    width: 100%;
+  }
+}
+
+.features__subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 auto;
+  max-width: 205px;
+  text-align: center;
+
+  & + & {
+    margin-top: 31px;
+  }
+}
+
+.features__body {
+  background-color: $secondary-bg-color;
+  padding-top: 31px;
 }
 
 .features__items {
-  background-color: $secondary-bg-color;
-  height: 1px;
-  min-height: 754px;
+  overflow: hidden;
+  padding-top: 55px;
+}
 
+.features__item {
+  margin-bottom: 34px;
+
+  &:last-child {
+    /* to fit text like in design */
+    margin: 0 -1px 0;
+  }
 }
 
 .features__list {
   list-style: none;
   margin: 0;
-  min-height: 478px;
+  margin-bottom: 40px;
   padding: 0;
+  text-align: center;
 }
 
 .features__item-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
+  margin: 0 0 15px;
 }
 
 .features__item-title strong {
   font-weight: inherit;
 }
 
+.features__item-description {
+  margin: 0;
+}
+
 .features__device-preview {
   height: 277px;
-  width: 1257px;
+  margin: 0 auto;
+  width: 157px;
 }
 
 @media #{$max-tablet-widths} {
@@ -57,30 +94,58 @@
   }
 
   .features__header {
-    min-height: 290px;
+    padding-bottom: 49px;
+    padding-top: 49px;
+
+    &::after {
+      height: 50px;
+    }
+  }
+
+  .features__subtitle {
+    font-size: 40px;
+    line-height: 1.2;
+    max-width: none;
+
+    & + & {
+      margin-top: 0;
+      max-width: 340px;
+    }
   }
 
   .features__items {
-    min-height: 434px;
+    overflow: visible;
+    padding-bottom: 42px;
+    padding-top: 45px;
   }
 
   .features__list {
-    min-height: 434px;
+    margin-bottom: 0;
     padding-left: 310px;
+    text-align: left;
+  }
+
+  .features__item {
+    margin-bottom: 37px;
   }
 
   .features__device-preview {
     left: 20px;
-    bottom: 0;
-    height: 484px;
+    height: 547px;
     position: absolute;
+    top: -75px;
     width: 268px;
+
+    img {
+      height: 547px;
+      width: 268px;
+    }
   }
 
   .features__research {
-    height: 1px;
-    min-height: 393px;
-    padding: 59px 0;
+    background-color: #fff;
+    padding: 96px 0;
+    position: relative;
   }
 
   .features__research-content {
@@ -89,11 +154,17 @@
 
   .features__research-title {
     font-size: 30px;
+    font-weight: 700;
     line-height: 1.2;
+    margin: 0 0 10px;
 
     b {
-      font-weight: 700;
+      font-weight: inherit;
     }
+  }
+
+  .features__research-description {
+    margin: 0 0 10px;
   }
 
   .features__research-more {
@@ -103,12 +174,25 @@
 
 @media #{$min-desktop-widths} {
   .features__header {
-    min-height: 417px;
+    padding-bottom: 81px;
+    padding-top: 67px;
+
+    &::after {
+      height: 90px;
+    }
+  }
+
+  .features__subtitle {
+    font-size: 50px;
+
+    & + & {
+      max-width: 420px;
+    }
   }
 
   .features__body {
     background-color: $secondary-bg-color;
-    min-height: 945px;
+    padding-top: 0;
   }
 
   .features__items {
@@ -120,10 +204,13 @@
     display: flex;
     min-height: 473px;
     padding-left: 0;
+    text-align: center;
   }
 
   .features__item {
     flex: none;
+    margin-bottom: 0;
+    padding-top: 307px;
     width: 300px;
   }
 
@@ -131,27 +218,50 @@
     margin-right: 20px;
   }
 
+  .features__item-title {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 24px;
+
+    .features__item--share & {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .features__item-description {
+    font-size: 18px;
+    line-height: 1.66666667;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
   .features__device-preview {
     display: none;
   }
 
   .features__research {
-    height: 1px;
-    min-height: 471px;
-    padding: 59px 0;
+    background-color: transparent;
+    padding: 118px 0 114px;
   }
 
   .features__research-content {
-    padding-left: 370px;
+    padding-left: 366px;
   }
 
   .features__research-title {
     line-height: 1;
+    margin-bottom: 24px;
+
+    br {
+      display: none;
+    }
   }
 
   .features__research-description {
     font-size: 18px;
     line-height: 1.66666667;
+    margin-bottom: 30px;
   }
 
   .features__research-more {

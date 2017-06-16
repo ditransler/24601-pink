@@ -1,13 +1,18 @@
 .contest {
-  padding: 50px 0;
+  padding: 45px 0 21px;
 }
 
 .contest__container {
   @include container();
+
+  .contest__fullname & {
+    border: 0;
+  }
 }
 
 .contest__subtitle {
   line-height: 2.14285714;
+  margin: 0;
   text-align: center;
 }
 
@@ -20,69 +25,78 @@
   color: $brand-color;
   font-size: 14px;
   line-height: 1.28571429;
+  text-align: center;
   text-transform: uppercase;
+
+  .contest__emotions & {
+    margin-bottom: 16px;
+  }
 }
 
 .contest__form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
 }
 
 .contest__form-label {
   color: $brand-color;
+  display: block;
   font-size: 14px;
   line-height: 2.14285714;
+  margin-bottom: 5px;
+  padding-left: 20px;
   text-transform: uppercase;
 }
 
 .contest__fullname {
   margin-bottom: 42px;
-  min-height: 369px;
   padding-top: 34px;
 }
 
 .contest__travel-achievements {
   background-color: $secondary-bg-color;
-  margin-bottom: 40px;
-  min-height: 566px;
   padding-top: 40px;
 }
 
 .contest__checkboxes-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 41px 0 47px;
+}
+
+.contest__checkboxes-item:not(:last-child) {
+  margin-bottom: 52px;
 }
 
 .contest__contacts {
-  margin-bottom: 42px;
-  min-width: 256px;
+  padding-bottom: 42px;
   padding-top: 32px;
 }
 
 .contest__app-platform {
   background-color: $secondary-bg-color;
-  margin-bottom: 40px;
-  min-height: 303px;
+  padding-bottom: 47px;
   padding-top: 40px;
-}
-
-.contest__app-platform .contest__container {
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 280px;
 }
 
 .contest__radios-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  margin-left: -20px;
+  padding: 37px 0 0;
+}
+
+.contest__radios-item:not(:last-child) {
+  margin-bottom: 45px;
 }
 
 .contest__emotions {
-  padding-top: 40px;
-  min-height: 236px;
+  padding-bottom: 41px;
+  padding-top: 38px;
 }
 
 .contest__emotions .contest__form-label {
@@ -95,12 +109,14 @@
 
 .contest__required-note {
   margin: 0;
-  margin-top: 35px;
+  margin-top: 38px;
   text-align: center;
   text-transform: uppercase;
 
   sup {
     color: $brand-color;
+    display: inline-block;
+    vertical-align: sub;
   }
 }
 
@@ -108,9 +124,37 @@
   .contest__subtitle-extra {
     display: none;
   }
+
+  .contest__container {
+    border: 0;
+  }
+
+  .contest__contacts .contest__form-legend {
+    @include visually-hidden();
+  }
+
+  .contest__app-platform .contest__container {
+    width: 280px;
+  }
+
 }
 
 @media #{$min-tablet-widths} {
+  .contest {
+    padding-bottom: 50px;
+    padding-top: 92px;
+  }
+
+  .contest__container {
+    max-width: 620px;
+
+    .contest__header &,
+    .contest__fullname &,
+    .contest__form-footer & {
+      max-width: none;
+    }
+  }
+
   .contest__subtitle {
     font-size: 18px;
     line-height: 1.66666667;
@@ -118,12 +162,33 @@
     max-width: 500px;
   }
 
-  .contest__fullname {
-    order: 1;
+  .contest__form-legend {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    br {
+      display: none;
+    }
   }
 
-  .contest__fullname .contest__form-group {
-    flex-direction: row;
+  .contest__fullname {
+    order: 1;
+    padding-top: 71px;
+
+    .contest__form-group {
+      align-items: baseline;
+      flex-direction: row;
+
+      &:not(:last-child) {
+        margin-bottom: 52px;
+      }
+    }
+
+    .contest__form-label {
+      margin-bottom: 0;
+      margin-right: 18px;
+      padding-left: 0;
+    }
   }
 
   .contest__travel-achievements {
@@ -137,34 +202,90 @@
 
   .contest__contacts {
     order: 3;
-  }
+    padding-bottom: 17px;
 
-  .contest__contacts .contest__form-label {
-    order: 2;
-  }
+    .contest__container {
+      padding: 37px 58px 26px;
+    }
 
-  .contest__contacts .contest__form-input {
-    order: 1;
+    .contest__form-group {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 29px;
+      }
+
+      &::after {
+        background: #e5e5e5;
+        content: "";
+        height: 59px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 60px;
+      }
+    }
+
+    .contest__form-label {
+      margin-bottom: 0;
+      order: 2;
+    }
+
+    .contest__form-input {
+      margin-bottom: 10px;
+      order: 1;
+      padding-right: 59px;
+    }
   }
 
   .contest__app-platform {
     background-color: #fff;
     order: 2;
+    padding-bottom: 25px;
+    padding-top: 16px;
+  }
+
+  .contest__radios-list {
+    padding: 48px 0 59px 58px;
+  }
+
+  .contest__checkboxes-list {
+    margin-left: 38px;
+    padding-bottom: 53px;
+    padding-top: 48px;
   }
 
   .contest__emotions {
     order: 5;
+    padding-top: 57px;
+
+    .contest__container {
+      padding: 37px 58px 44px;
+    }
+
+    .contest__form-legend {
+      margin-bottom: 0;
+    }
+  }
+
+  .textarea {
+    max-width: 500px;
+    min-height: 193px;
   }
 
   .contest__form-footer {
     order: 7;
-    padding-top: 67px;
+    padding-top: 26px;
   }
 
   .contest__form-footer .contest__container {
     align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+
+  .contest__submit {
+    min-width: 300px;
   }
 
   .contest__required-note {
@@ -179,6 +300,10 @@
 }
 
 @media #{$min-desktop-widths} {
+  .contest {
+    padding-bottom: 0;
+  }
+
   .contest__subtitle {
     max-width: 760px;
   }
@@ -189,19 +314,66 @@
   }
 
   .contest__fullname {
+    margin-bottom: 0;
+    order: 1;
+    padding-top: 84px;
     width: 50%;
+
+    .contest__container {
+      padding-left: 35px;
+      padding-right: 35px;
+      width: auto;
+    }
+
+    .contest__form-group {
+      justify-content: flex-end;
+    }
+
+    .contest__form-input {
+      max-width: 340px;
+
+      &[name="first-name"] {
+        max-width: 380px;
+      }
+    }
   }
 
   .contest__travel-achievements {
     width: 100%;
+
+    .contest__container {
+      padding-left: 58px;
+      padding-right: 58px;
+      max-width: none;
+      width: 940px;
+    }
   }
 
   .contest__contacts {
+    padding-top: 56px;
     width: 100%;
-  }
 
-  .contest__contacts  .contest__form-group {
-    width: 45.6%;
+    .contest__container {
+      /**
+        Had to use zero font-size and 'display: inline-flex' for .contest__form-group
+        because of a unresolved bug in Blink with setting 'display: flex' on the fieldset tag
+      **/
+      font-size: 0;
+      max-width: none;
+      padding-bottom: 13px;
+      padding-top: 34px;
+      width: 940px;
+    }
+
+    .contest__form-group {
+      display: inline-flex;
+      width: 45.6%;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 71px;
+      }
+    }
   }
 
   .contest__checkboxes-list {
@@ -209,16 +381,54 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 1px;
-    justify-content: space-between;
     margin: 0;
-    min-height: 60px;
+    margin-left: -55px;
+    min-height: 220px;
+    padding-bottom: 8px;
+  }
+
+  .contest__checkboxes-item {
+    margin-left: 55px;
   }
 
   .contest__app-platform {
+    order: 2;
+    padding: 70px 35px 0;
     width: 50%;
+
+    .contest__container {
+      margin: 0;
+      max-width: 435px;
+      padding-left: 0;
+      padding-right: 0;
+      width: auto;
+    }
+  }
+
+  .contest__radios-list {
+    margin-left: 0;
+    padding-left: 74px;
+    padding-top: 51px;
   }
 
   .contest__emotions {
+    padding-bottom: 0;
     width: 100%;
+
+    .contest__container {
+      padding-bottom: 36px;
+      padding-top: 34px;
+      max-width: none;
+      width: 940px;
+    }
+  }
+
+  .textarea {
+    max-width: none;
+    min-height: 128px;
+  }
+
+  .contest__form-footer {
+    padding-top: 65px;
   }
 }

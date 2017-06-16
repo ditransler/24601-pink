@@ -9,14 +9,14 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container">
-        <nav class="main-menu">
+      <nav class="main-menu main-menu--opened">
+        <div class="page-header__container">
           <div class="main-menu__header">
             <a class="main-menu__logo main-logo" href="index.html" title="Вернуться на Главную">
               <!-- img will be replaced with picture or inline SVG -->
-              <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип PINK">
             </a>
-            <button class="main-menu__toggle" type="button" title="Открыть/закрыть меню">
+            <button class="main-menu__toggle btn" type="button" title="Открыть/закрыть меню">
               <span>Открыть/закрыть меню</span>
             </button>
           </div>
@@ -34,12 +34,12 @@
               <a class="main-menu__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на сайт HTML Academy" target="_blank">HTML Academy</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
 
     <main class="page-main">
-      <div class="intro">
+      <div class="intro intro--form">
         <div class="intro__container">
           <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
@@ -62,7 +62,7 @@
               </div>
               <div class="contest__form-group">
                 <label class="contest__form-label" for="participant-first-name">Имя:</label>
-                <input class="contest__form-input input" id="participant-first-name" name="first-name" type="text" placeholder="Укажите ваше имя *" required>
+                <input class="contest__form-input input" id="participant-first-name" name="first-name" type="text" placeholder="Введите ваше имя *" required>
               </div>
               <div class="contest__form-group">
                 <label class="contest__form-label" for="participant-middle-name">Отчество:</label>
@@ -72,7 +72,7 @@
           </div>
           <div class="contest__travel-achievements">
             <fieldset class="contest__container">
-              <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="contest__form-legend">Ваши безбашенные <br> достижения в путешествии</legend>
               <ul class="contest__checkboxes-list">
                 <li class="contest__checkboxes-item">
                   <div class="checkbox">
@@ -115,12 +115,12 @@
           </div>
           <div class="contest__contacts">
             <fieldset class="contest__container">
-              <legend class="contest__form-legend visually-hidden">Контакты участника</legend> <!-- accessibly hidden -->
-              <div class="contest__form-group">
+              <legend class="contest__form-legend">Контактная информация</legend> <!-- accessibly hidden -->
+              <div class="contest__form-group contest__form-group--phone">
                 <label class="contest__form-label" for="participant-phone">Номер телефона:</label>
                 <input class="contest__form-input input" id="participant-phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
               </div>
-              <div class="contest__form-group">
+              <div class="contest__form-group contest__form-group--email">
                 <label class="contest__form-label" for="participant-email">Адрес почты:</label>
                 <input class="contest__form-input input" id="participant-email" name="email" type="email" placeholder="Введите почту *" required>
               </div>
@@ -128,7 +128,7 @@
           </div>
           <div class="contest__app-platform">
             <fieldset class="contest__container">
-              <legend class="contest__form-legend">С каким приложением путешествовал?</legend>
+              <legend class="contest__form-legend">С каким приложением путешествовали?</legend>
               <ul class="contest__radios-list">
                 <li class="contest__radios-item">
                   <div class="radio">
@@ -139,23 +139,23 @@
                 <li class="contest__radios-item">
                   <div class="radio">
                     <input class="radio__input" id="applicant-app-platform-android" name="applicant-app-platform" type="radio" value="android">
-                    <label class="radio__label" for="applicant-app-platform-android">Pink для iOS</label>
+                    <label class="radio__label" for="applicant-app-platform-android">Pink на Android</label>
                   </div>
                 </li>
                 <li class="contest__radios-item">
                   <div class="radio">
                     <input class="radio__input" id="applicant-app-platform-windows-phone" name="applicant-app-platform" type="radio" value="windows-phone">
-                    <label class="radio__label" for="applicant-app-platform-windows-phone">Pink для iOS</label>
+                    <label class="radio__label" for="applicant-app-platform-windows-phone">Windows Phone</label>
                   </div>
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="contest__emotions">
-            <div class="contest__container">
-              <label class="contest__form-label" for="applicant-emotions">Опишите свои эмоции</label>
-              <textarea class="textarea" id="applicant-emotions" name="applicant-emotions" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </div>
+            <fieldset class="contest__container">
+              <legend class="contest__form-legend">Опишите свои эмоции</legend>
+              <textarea class="textarea" id="applicant-emotions" name="applicant-emotions" cols="30" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
           </div>
           <div class="contest__form-footer">
             <div class="contest__container">
@@ -171,17 +171,17 @@
       <div class="page-footer__container">
         <a class="page-footer__logo main-logo" href="index.html" title="Вернуться на Главную">
           <!-- img will be replaced with picture or inline SVG -->
-          <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип PINK">
         </a>
-        <div class="page-footer__socials social-links">
-          <a class="social‐link social‐link‐‐vk" href="#" title="Мы вКонтакте" target="_blank">Vkontakte</a>
-          <a class="social‐link social‐link‐‐fb" href="#" title="Мы в Фейсбук" target="_blank">Facebook</a>
-          <a class="social‐link social‐link‐‐yt" href="#" title="Мы на Ютуб" target="_blank">Youtube</a>
+        <div class="page-footer__socials">
+          <a class="social-link social-link--tw" href="#" title="Мы в Твиттер" target="_blank">Twitter</a>
+          <a class="social-link social-link--fb" href="#" title="Мы в Фейсбук" target="_blank">Facebook</a>
+          <a class="social-link social-link--yt" href="#" title="Мы на Ютуб" target="_blank">Youtube</a>
         </div>
         <div class="page-footer__developers">
-          Разработано:
+          <span class="page-footer__developers-label">Разработано:</span>
           <a class="page-footer__developers-link" href="https://htmlacademy.ru/intensive/adaptive" title="Продвинутый интенсив HTML Academy" target="_blank">
-            <img src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>
@@ -193,7 +193,7 @@
         <div class="popup__content">
           <p class="popup__title"><strong>Что-то пошло не так!</strong></p>
           <div class="popup__description">
-            <p>Проверьте поля, выделенные крассным, скорее всего вы забыли их заполнить</p>
+            <p>Проверьте поля, выделенные крассным, скорее всего вы забыли <br> их заполнить</p>
           </div>
         </div>
         <div class="popup__footer">
@@ -208,7 +208,7 @@
           <p class="popup__title"><strong>Ваша заявка отправлена</strong></p>
           <div class="popup__description">
             <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и
-              оповестим вас.</p>
+              оповестим&nbsp;вас.</p>
           </div>
         </div>
         <div class="popup__footer">
