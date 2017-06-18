@@ -108,6 +108,7 @@
       height: 51px;
     }
   }
+
   .testimonials__item {
     display: flex;
     flex-direction: column;
@@ -163,6 +164,8 @@
     position: relative;
 
     &::before {
+      background: url("../img/icon-quotes.svg") no-repeat;
+      background-size: contain;
       content: "";
       height: 63px;
       left: 50%;
@@ -170,8 +173,6 @@
       transform: translateX(-50%);
       top: 0;
       width: 79px;
-
-      outline: 1px solid red;
     }
   }
 
