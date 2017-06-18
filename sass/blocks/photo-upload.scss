@@ -41,25 +41,31 @@
 
 .photo-upload__edit-btn {
   background-repeat: no-repeat;
+  fill: $brand-color;
   flex: none;
   font-size: 0;
 
+  &:hover {
+    fill: rgba($main-dark-color, 0.3);
+  }
+
+  &:hover {
+    fill: rgba($main-dark-color, 0.5);
+  }
+
   &--crop {
-    background-image: url("../img/icon-editor-crop.svg");
     height: 44px;
     margin-right: 36px;
     width: 44px;
   }
 
   &--fill {
-    background-image: url("../img/icon-editor-fill.svg");
     height: 43px;
     margin-right: 40px;
     width: 48px;
   }
 
   &--contrast {
-    background-image: url("../img/icon-editor-contrast.svg");
     height: 32px;
     width: 32px;
   }
