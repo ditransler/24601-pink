@@ -150,6 +150,35 @@
 
   .features__research-content {
     padding-left: 310px;
+    position: relative;
+
+    &::before {
+      background: url("../img/icon-timer.svg") no-repeat;
+      background-size: contain;
+      content: "";
+      height: 276px;
+      left: 0;
+      position: absolute;
+      top: -37px;
+      width: 239px;
+    }
+
+    &::after {
+      border: 13px solid $brand-color;
+      border-radius: 50%;
+      color: $brand-color;
+      content: "24";
+      font-size: 96px;
+      font-weight: 700;
+      left: 19px;
+      line-height: 1;
+      height: 202px;
+      padding-top: 35px;
+      position: absolute;
+      text-align: center;
+      top: 18px;
+      width: 202px;
+    }
   }
 
   .features__research-title {
@@ -286,6 +315,22 @@
 
   .features__research-content {
     padding-left: 366px;
+
+    &::before {
+      height: 345px;
+      top: -95px;
+      width: 298px;
+    }
+
+    &::after {
+      border-width: 16px;
+      font-size: 120px;
+      left: 23px;
+      height: 253px;
+      padding-top: 45px;
+      top: -26px;
+      width: 253px;
+    }
   }
 
   .features__research-title {
