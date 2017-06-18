@@ -211,7 +211,46 @@
     flex: none;
     margin-bottom: 0;
     padding-top: 307px;
+    position: relative;
     width: 300px;
+
+    &::before {
+      background-repeat: no-repeat;
+      background-size: 292px auto;
+      content: "";
+      height: 302px;
+      left: 4px;
+      position: absolute;
+      top: -52px;
+      width: 292px;
+    }
+
+    &--mood::before {
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+      left: 4px;
+
+      @media #{$retina} {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      }
+    }
+
+    &--change::before {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+      left: 7px;
+
+      @media #{$retina} {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
+    }
+
+    &--share::before {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+      left: 8px;
+
+      @media #{$retina} {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
+    }
   }
 
   .features__item:not(:last-child) {
