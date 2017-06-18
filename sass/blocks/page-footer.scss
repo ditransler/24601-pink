@@ -20,13 +20,29 @@
   display: inline-block;
   font-size: 14px;
   line-height: 1.28571429;
-  margin-right: 15px;
+  margin-right: 4px;
   vertical-align: middle;
 }
 
 .page-footer__developers-link {
   display: inline-block;
   vertical-align: middle;
+}
+
+.page-footer__developers-icon {
+  fill: $brand-color;
+  height: 43px;
+  margin-right: -8px;
+  margin-top: -2px;
+  width: 43px;
+
+  &:hover {
+    fill: $main-dark-color;
+  }
+
+  &:active {
+    fill: rgba($main-dark-color, 0.3);
+  }
 }
 
 @media #{$max-tablet-widths} {
@@ -61,7 +77,7 @@
   }
 
   .page-footer__developers {
-    padding-top: 13px;
+    padding-top: 10px;
   }
 }
 
