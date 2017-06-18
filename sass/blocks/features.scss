@@ -10,12 +10,12 @@
   position: relative;
 
   &::after {
-    background: url("../img/bg-triangle-white.svg") 0 100% no-repeat;
-    background-size: cover;
+    background: url("../img/bg-triangle-white.svg") no-repeat;
+    background-size: contain;
     content: "";
     left: 0;
+    padding-top: 9.6875%;
     position: absolute;
-    height: 31px;
     top: 100%;
     width: 100%;
   }
@@ -96,10 +96,6 @@
   .features__header {
     padding-bottom: 49px;
     padding-top: 49px;
-
-    &::after {
-      height: 50px;
-    }
   }
 
   .features__subtitle {
@@ -205,10 +201,6 @@
   .features__header {
     padding-bottom: 81px;
     padding-top: 67px;
-
-    &::after {
-      height: 90px;
-    }
   }
 
   .features__subtitle {
