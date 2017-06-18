@@ -1,6 +1,7 @@
 .intro {
   background: #1d2631 url("../img/bg-back-mobile@1x.jpg") center 0 no-repeat;
   margin-top: -66px;
+  overflow: hidden;
   padding-top: 96px;
 
   &--index {
@@ -110,15 +111,15 @@
 
   .intro__device-preview {
     bottom: 0;
-    height: 546px;
+    height: 545px;
     position: absolute;
-    right: 20px;
-    width: 470px;
+    right: -20px;
+    width: 700px;
   }
 
   .intro__device-preview img {
-    height: 546px;
-    width: 470px;
+    height: 545px;
+    width: 700px;
   }
 
   .intro__downloading {
@@ -173,14 +174,14 @@
   }
 
   .intro__device-preview {
-    height: 644px;
+    height: 645px;
     position: absolute;
-    right: 50px;
-    width: 555px;
+    right: -115px;
+    width: 1050px;
 
     img {
-      height: 644px;
-      width: 555px;
+      height: 645px;
+      width: 1050px;
     }
   }
 
