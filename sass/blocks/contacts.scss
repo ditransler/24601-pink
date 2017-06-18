@@ -86,6 +86,10 @@
   background: $secondary-bg-color url("../img/bg-map-mobile@1x.png") center center no-repeat;
   background-size: cover;
   min-height: 200px;
+
+  @media #{$retina} {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
 }
 
 @media #{$min-tablet-widths} {
@@ -128,6 +132,11 @@
 
   .contacts__map {
     min-height: 375px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+
+    @media #{$retina} {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
   }
 }
 
@@ -169,6 +178,11 @@
   }
 
   .contacts__map {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
     min-height: 503px;
+
+    @media #{$retina} {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
   }
 }
