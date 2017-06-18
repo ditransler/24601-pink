@@ -8,11 +8,21 @@
 
 .main-menu__header {
   align-items: center;
-  border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  padding: 22px 20px 24px;
+  .main-menu--closed & {
+    padding-bottom: 21px;
+    padding-top: 21px;
+  }
+
+  .main-menu--opened & {
+    border-bottom: 1px solid #000;
+    padding-bottom: 24px;
+    padding-top: 22px;
+  }
 }
 
 .main-menu__logo {
@@ -21,15 +31,73 @@
 }
 
 .main-menu__toggle {
-  background: url("../img/icon-menu-burger.svg") no-repeat;
   font-size: 0;
-  height: 24px;
-  width: 50px;
 
   .main-menu--opened & {
-    background-image: url("../img/icon-menu-cross.svg");
     height: 24px;
     width: 24px;
+
+    &::before,
+    &::after {
+      background-color: #fff;
+      content: "";
+      height: 4px;
+      left: -2px;
+      position: absolute;
+      top: 8px;
+      width: 30px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: $brand-color;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba($brand-color, 0.3);
+    }
+  }
+
+  .main-menu--closed & {
+    height: 24px;
+    width: 50px;
+
+    &::before {
+      background-color: #fff;
+      box-shadow: 0 10px 0 0 #fff,
+                  0 20px 0 0 #fff;
+      content: "";
+      height: 4px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &:hover::before {
+      background-color: $brand-color;
+      box-shadow: 0 10px 0 0 $brand-color,
+                  0 20px 0 0 $brand-color;
+    }
+
+    &:active:before {
+      background-color: rgba($brand-color, 0.3);
+      box-shadow: 0 10px 0 0 rgba($brand-color, 0.3),
+                  0 20px 0 0 rgba($brand-color, 0.3);
+    }
+  }
+
+  .main-menu--no-js & {
+    display: none;
   }
 }
 
@@ -75,13 +143,36 @@
 @media #{$min-tablet-widths} {
   .main-menu__header {
     align-items: flex-end;
-    padding-bottom: 43px;
-    padding-top: 27px;
+    
+    .main-menu--opened &,
+    .main-menu--closed & {
+      padding-bottom: 43px;
+      padding-top: 27px;
+    }
   }
 
   .main-menu__logo {
     height: 40px;
     width: 147px;
+  }
+}
+
+@media #{$max-desktop-widths} {
+  .main-menu--closed .main-menu__list {
+    display: none;
+  }
+
+  .main-menu--no-js {
+    background-color: #283645;
+
+    .main-menu__header {
+      border-bottom: 1px solid #000;
+      justify-content: center;
+    }
+
+    .main-menu__list {
+      display: block;
+    }
   }
 }
 
@@ -96,6 +187,12 @@
     flex: none;
     padding: 0;
     width: 147px;
+
+    .main-menu--closed &,
+    .main-menu--opened & {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
   }
 
   .main-menu__list {
