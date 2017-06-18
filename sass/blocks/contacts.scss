@@ -11,9 +11,11 @@
     content: "";
     height: 33px;
     left: 0;
+    padding-top: 10.625%;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
     width: 100%;
+    z-index: 1;
   }
 }
 
