@@ -143,7 +143,7 @@
 @media #{$min-tablet-widths} {
   .main-menu__header {
     align-items: flex-end;
-    
+
     .main-menu--opened &,
     .main-menu--closed & {
       padding-bottom: 43px;

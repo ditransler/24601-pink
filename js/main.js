@@ -35,6 +35,30 @@
     }
   })();
 
+  // Handling MainMenu toggling
+  (function () {
+    var menuElem = document.querySelector(".main-menu");
+    var menuToggle = document.querySelector(".main-menu__toggle");
+
+    menuElem.classList.remove("main-menu--no-js");
+
+    menuToggle.addEventListener('click', function() {
+
+      if (menuElem.classList.contains("main-menu--closed")) {
+
+        menuElem.classList.remove("main-menu--closed");
+        menuElem.classList.add("main-menu--opened");
+
+      } else {
+
+        menuElem.classList.add("main-menu--closed");
+        menuElem.classList.remove("main-menu--opened");
+
+      }
+
+    });
+  })();
+
 })(window, document, window.PinkSite || {});
 
 
