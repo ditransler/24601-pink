@@ -67,6 +67,16 @@
 
   &--link {
     text-decoration: none;
+
+    &:hover {
+      color: $main-dark-color;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: rgba($main-dark-color, 0.3);
+      text-decoration: none;
+    }
   }
 }
 
