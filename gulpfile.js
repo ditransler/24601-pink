@@ -11,6 +11,7 @@ var cssminify = require("gulp-csso");
 var jsuglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
 
@@ -80,6 +81,12 @@ gulp.task("images", function () {
     .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("svg", function () {
+  return gulp.src("build/svg/**/*.svg")
+    .pipe(svgmin())
+    .pipe(gulp.dest("build/img"));
+});
+
 gulp.task("serve", function() {
   server.init({
     browser: "google chrome",
@@ -96,5 +103,5 @@ gulp.task("serve", function() {
 });
 
 gulp.task("build", function (fn) {
-  run("clean", "copy", "style", "js", "images", fn);
+  run("clean", "copy", "style", "js", "images", "svg", fn);
 });
