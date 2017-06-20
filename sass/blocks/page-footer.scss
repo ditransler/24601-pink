@@ -8,6 +8,33 @@
   display: flex;
 }
 
+.page-footer__logo {
+  fill: $main-dark-color;
+  height: 40px;
+  width: 146px;
+
+  &:hover {
+    fill: $brand-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-name {
+  fill: inherit;
+}
+
+.page-footer__logo-glasses,
+.page-footer__logo-name-star {
+  fill: $brand-color;
+}
+
+.page-footer__logo-glasses-stars {
+  fill: $main-dark-color;
+}
+
 .page-footer__socials {
   font-size: 0;
 }
@@ -66,11 +93,6 @@
     justify-content: space-between;
   }
 
-  .page-footer__logo {
-    height: 40px;
-    width: 147px;
-  }
-
   .page-footer__socials {
     padding-right: 14px;
     padding-top: 2px;
@@ -81,10 +103,21 @@
   }
 }
 
+@media #{$max-desktop-widths} {
+  .page-footer__logo-glasses--desktop,
+  .page-footer__logo-stars {
+    display: none;
+  }
+}
+
 @media #{$min-desktop-widths} {
   .page-footer {
     padding-bottom: 73px;
     padding-top: 71px;
+  }
+
+  .page-footer__logo-glasses--tablet {
+    display: none;
   }
 
   .page-footer__socials {
