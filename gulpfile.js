@@ -9,6 +9,7 @@ var server = require("browser-sync").create();
 var mqpacker = require("css-mqpacker");
 var cssminify = require("gulp-csso");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -27,6 +28,15 @@ gulp.task("style", function() {
     .pipe(cssminify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"));
+});
+
+gulp.task("images", function () {
+  return gulp.src("img/**/*.{png,jpg,gif}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true})
+    ]))
+    .pipe(gulp.dest("img"));
 });
 
 gulp.task("serve", ["style"], function() {
