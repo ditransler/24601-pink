@@ -141,6 +141,7 @@
 
   .photos__item {
     display: flex;
+    height: 1px;
     min-height: 455px;
     flex-direction: column;
     width: 48.4%;
@@ -148,6 +149,7 @@
     &--panorama {
       flex: none;
       margin-bottom: 50px;
+      min-height: 630px;
       width: 100%;
 
       .photos__comment {
@@ -228,6 +230,7 @@
 
     &--panorama {
       margin-bottom: 50px;
+      min-height: 602px;
       width: 100%;
     }
   }
