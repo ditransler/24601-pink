@@ -26,8 +26,38 @@
 }
 
 .main-menu__logo {
-  height: 22px;
-  width: 75px;
+  fill: #fff;
+  height: 23px;
+  width: 74px;
+
+  &:hover {
+    fill: $brand-color;
+  }
+
+  &:active {
+    fill: rgba($brand-color, 0.3);
+  }
+}
+
+/**
+  On mobile available space for the logo
+  is less than the whole svg (for desktop) with hidden elements.
+  That is why we need to position the name (text) with negative margins.
+**/
+.main-menu__logo-svg {
+  height: 40px;
+  margin-left: -72px;
+  margin-top: -17px;
+  width: 146px;
+}
+
+.main-menu__logo-name,
+.main-menu__logo-glasses {
+  fill: inherit;
+}
+
+.main-menu__logo-glasses--tablet {
+  display: none;
 }
 
 .main-menu__toggle {
@@ -153,7 +183,18 @@
 
   .main-menu__logo {
     height: 40px;
-    width: 147px;
+    width: 146px;
+  }
+
+  .main-menu__logo-svg {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media #{$only-tablet-widths} {
+  .main-menu__logo-glasses--tablet {
+    display: inline;
   }
 }
 
@@ -173,6 +214,14 @@
     .main-menu__list {
       display: block;
     }
+  }
+
+  .main-menu__logo-glasses--desktop {
+    display: none;
+  }
+
+  .main-menu__logo-stars {
+    display: none;
   }
 }
 
