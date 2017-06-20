@@ -60,7 +60,3 @@
   })();
 
 })(window, document, window.PinkSite || {});
-
-
-
-
