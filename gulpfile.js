@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var mqpacker = require("css-mqpacker");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -14,7 +15,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
-      ]})
+      ]}),
+      mqpacker({
+        sort: true
+      })
     ]))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
