@@ -1,8 +1,10 @@
 .main-logo {
   display: inline-block;
+  overflow: hidden;
   vertical-align: middle;
 
-  img {
-    display: block;
+  &--index {
+    cursor: default;
+    pointer-events: none;
   }
 }
