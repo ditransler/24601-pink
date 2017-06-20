@@ -10,6 +10,7 @@ var mqpacker = require("css-mqpacker");
 var cssminify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var run = require("run-sequence");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -51,4 +52,8 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
+});
+
+gulp.task("build", function (fn) {
+  run("style", "images", fn);
 });
