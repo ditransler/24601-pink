@@ -8,6 +8,7 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var mqpacker = require("css-mqpacker");
 var cssminify = require("gulp-csso");
+var jsuglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var run = require("run-sequence");
@@ -58,6 +59,18 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"));
 });
 
+gulp.task("js", ["js:copy"], function () {
+  return gulp.src("build/js/**/*.js")
+    .pipe(plumber())
+    .pipe(jsuglify())
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:copy", function () {
+  return gulp.src("js/**/*.js")
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("images", function () {
   return gulp.src("build/img/**/*.{png,jpg,gif}")
     .pipe(imagemin([
@@ -78,9 +91,10 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("js/**/*.js", ["js"]);
   gulp.watch("*.html", ["html:update"]);
 });
 
 gulp.task("build", function (fn) {
-  run("clean", "copy", "style", "images", fn);
+  run("clean", "copy", "style", "js", "images", fn);
 });
