@@ -7,6 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var mqpacker = require("css-mqpacker");
+var csso = require("gulp-csso");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -21,7 +22,9 @@ gulp.task("style", function() {
       })
     ]))
     .pipe(gulp.dest("css"))
-    .pipe(server.stream());
+    .pipe(server.stream())
+    .pipe(minify())
+    .pipe(gulp.dest("css"));
 });
 
 gulp.task("serve", ["style"], function() {
