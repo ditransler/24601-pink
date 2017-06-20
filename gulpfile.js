@@ -11,6 +11,11 @@ var cssminify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var run = require("run-sequence");
+var del = require("del");
+
+gulp.task("clean", function () {
+  return del("build");
+});
 
 gulp.task("copy", function () {
   return gulp.src([
