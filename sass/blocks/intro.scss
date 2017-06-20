@@ -22,6 +22,20 @@
   }
 }
 
+.intro--index .intro__container::before {
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+  background-size: 258px 286px;
+  content: "";
+  height: 286px;
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+
+  @media #{$retina} {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
+}
+
 .intro__title {
   color: #fff;
   font-size: 24px;
@@ -36,17 +50,6 @@
   .intro__downloading-slogan {
     @include visually-hidden();
   }
-}
-
-.intro__device-preview {
-  margin: 0 auto;
-  width: 320px;
-}
-
-.intro__device-preview img {
-  height: 286px;
-  display: block;
-  width: 258px;
 }
 
 .intro__downloading {
@@ -93,6 +96,20 @@
   .intro__container {
     @include container();
     position: relative;
+
+    .intro--index &::before {
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+      background-size: 700px 545px;
+      bottom: 0;
+      height: 545px;
+      position: absolute;
+      right: -20px;
+      width: 700px;
+
+      @media #{$retina} {
+        background-image: url("../img/iphone-hand-tablet@2x.png");
+      }
+    }
   }
 
   .intro__downloading-slogan {
@@ -107,19 +124,6 @@
     b {
       font-weight: inherit;
     }
-  }
-
-  .intro__device-preview {
-    bottom: 0;
-    height: 545px;
-    position: absolute;
-    right: -20px;
-    width: 700px;
-  }
-
-  .intro__device-preview img {
-    height: 545px;
-    width: 700px;
   }
 
   .intro__downloading {
@@ -159,6 +163,18 @@
     }
   }
 
+  .intro--index .intro__container::before {
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-size: 1050px 645px;
+    height: 645px;
+    right: -115px;
+    width: 1050px;
+
+    @media #{$retina} {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+    }
+  }
+
   .intro__title {
     max-width: none;
 
@@ -171,18 +187,6 @@
     font-size: 50px;
     margin-bottom: 52px;
     max-width: 237px;
-  }
-
-  .intro__device-preview {
-    height: 645px;
-    position: absolute;
-    right: -115px;
-    width: 1050px;
-
-    img {
-      height: 645px;
-      width: 1050px;
-    }
   }
 
   .intro__downloading {
