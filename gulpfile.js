@@ -12,6 +12,18 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var run = require("run-sequence");
 
+gulp.task("copy", function () {
+  return gulp.src([
+    "fonts/**/*.{woff, woff2}",
+    "img/**",
+    "js/**",
+    "*.html"
+  ], {
+    base: "."
+  })
+  .pipe(gulp.dest("build"));
+});
+
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
