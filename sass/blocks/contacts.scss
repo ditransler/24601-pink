@@ -105,16 +105,15 @@
   }
 
   .contacts__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    font-size: 0;
     padding-bottom: 31px;
+    text-align: center;
   }
 
   .contacts__item {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 300px;
+    display: inline-block;
+    min-width: 310px;
+    vertical-align: middle;
 
     &:last-child {
       padding-top: 27px;
@@ -157,6 +156,7 @@
   }
 
   .contacts__list {
+    display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
   }

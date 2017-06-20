@@ -94,8 +94,10 @@
   }
 
   .intro__container {
-    @include container();
+    margin: 0 auto;
+    padding: 0 20px;
     position: relative;
+    width: 660px;
 
     .intro--index &::before {
       background-image: url("../img/iphone-hand-tablet@1x.png");
@@ -163,15 +165,21 @@
     }
   }
 
-  .intro--index .intro__container::before {
-    background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-size: 1050px 645px;
-    height: 645px;
-    right: -115px;
-    width: 1050px;
+  .intro__container {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 960px;
 
-    @media #{$retina} {
-      background-image: url("../img/iphone-hand-desktop@2x.png");
+    .intro--index &::before {
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+      background-size: 1050px 645px;
+      height: 645px;
+      right: -115px;
+      width: 1050px;
+
+      @media #{$retina} {
+        background-image: url("../img/iphone-hand-desktop@2x.png");
+      }
     }
   }
 

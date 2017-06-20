@@ -5,8 +5,9 @@
 
 @media #{$min-desktop-widths} {
   .page-header__container {
-    @include container();
-
     display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 960px;
   }
 }
