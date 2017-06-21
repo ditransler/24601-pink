@@ -165,7 +165,9 @@
   }
 
   .prices__container {
-    @include container();
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 660px;
   }
 
   .prices__slider-list {
@@ -245,12 +247,13 @@
     padding-top: 143px;
   }
 
+  .prices__container {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 960px;
+  }
+
   .prices__plan-cell {
-
-    &--hit {
-
-    }
-
     .prices__plan-header & {
       padding-bottom: 21px;
     }

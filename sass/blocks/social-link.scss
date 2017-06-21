@@ -27,6 +27,7 @@
 
   &::before {
     background-repeat: no-repeat;
+    background-size: contain;
     content: "";
     left: 50%;
     position: absolute;

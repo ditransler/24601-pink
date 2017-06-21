@@ -3,12 +3,12 @@
   position: relative;
 
   &::after {
-    background: url("../img/bg-triangle-white.svg") 0 0 no-repeat;
+    background: url("../img/bg-triangle-white.svg") no-repeat;
     background-size: contain;
     content: "";
     left: 0;
+    padding-top: 8.125%;
     position: absolute;
-    height: 26px;
     top: 100%;
     width: 100%;
   }
@@ -103,11 +103,8 @@
   .testimonials {
     padding-bottom: 21px;
     padding-top: 29px;
-
-    &::after {
-      height: 51px;
-    }
   }
+
   .testimonials__item {
     display: flex;
     flex-direction: column;
@@ -152,10 +149,6 @@
   .testimonials {
     padding-bottom: 44px;
     padding-top: 75px;
-
-    &::after {
-      height: 100px;
-    }
   }
 
   .testimonials__list {
@@ -163,6 +156,8 @@
     position: relative;
 
     &::before {
+      background: url("../img/icon-quotes.svg") no-repeat;
+      background-size: contain;
       content: "";
       height: 63px;
       left: 50%;
@@ -170,8 +165,6 @@
       transform: translateX(-50%);
       top: 0;
       width: 79px;
-
-      outline: 1px solid red;
     }
   }
 

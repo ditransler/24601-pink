@@ -8,6 +8,33 @@
   display: flex;
 }
 
+.page-footer__logo {
+  fill: $main-dark-color;
+  height: 40px;
+  width: 146px;
+
+  &:hover {
+    fill: $brand-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-name {
+  fill: inherit;
+}
+
+.page-footer__logo-glasses,
+.page-footer__logo-name-star {
+  fill: $brand-color;
+}
+
+.page-footer__logo-glasses-stars {
+  fill: $main-dark-color;
+}
+
 .page-footer__socials {
   font-size: 0;
 }
@@ -20,13 +47,29 @@
   display: inline-block;
   font-size: 14px;
   line-height: 1.28571429;
-  margin-right: 15px;
+  margin-right: 4px;
   vertical-align: middle;
 }
 
 .page-footer__developers-link {
   display: inline-block;
   vertical-align: middle;
+}
+
+.page-footer__developers-icon {
+  fill: $brand-color;
+  height: 43px;
+  margin-right: -8px;
+  margin-top: -2px;
+  width: 43px;
+
+  &:hover {
+    fill: $main-dark-color;
+  }
+
+  &:active {
+    fill: rgba($main-dark-color, 0.3);
+  }
 }
 
 @media #{$max-tablet-widths} {
@@ -50,18 +93,20 @@
     justify-content: space-between;
   }
 
-  .page-footer__logo {
-    height: 40px;
-    width: 147px;
-  }
-
   .page-footer__socials {
     padding-right: 14px;
     padding-top: 2px;
   }
 
   .page-footer__developers {
-    padding-top: 13px;
+    padding-top: 10px;
+  }
+}
+
+@media #{$max-desktop-widths} {
+  .page-footer__logo-glasses--desktop,
+  .page-footer__logo-stars {
+    display: none;
   }
 }
 
@@ -71,13 +116,18 @@
     padding-top: 71px;
   }
 
+  .page-footer__logo-glasses--tablet {
+    display: none;
+  }
+
   .page-footer__socials {
     padding-right: 0;
+    padding-left: 7px;
   }
 
   .page-footer__developers-label {
     font-size: 18px;
     line-height: 1;
-    margin-right: 9px;
+    margin-right: 6px;
   }
 }

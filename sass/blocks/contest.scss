@@ -5,7 +5,11 @@
 .contest__container {
   @include container();
 
-  .contest__fullname & {
+  border: 2px solid #e5e5e5;
+
+  .contest__header &,
+  .contest__fullname &,
+  .contest__form-footer & {
     border: 0;
   }
 }
@@ -216,13 +220,25 @@
       }
 
       &::after {
-        background: #e5e5e5;
+        background-color: #e5e5e5;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
         content: "";
         height: 59px;
         position: absolute;
         right: 2px;
         top: 2px;
         width: 60px;
+      }
+
+      &--phone::after {
+        background-image: url("../img/icon-phone.svg");
+        background-size: 19px 19px;
+      }
+
+      &--email::after {
+        background-image: url("../img/icon-mail.svg");
+        background-size: 17px 13px;
       }
     }
 

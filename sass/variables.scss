@@ -10,5 +10,8 @@ $base-line-height: 1.71428571; // 24px/14px
 
 $min-tablet-widths: "(min-width: 660px)";
 $max-tablet-widths: "(max-width: 659px)";
+$only-tablet-widths: "(min-width: 660px) and (max-width: 1199px)";
 $min-desktop-widths: "(min-width: 1200px)";
 $max-desktop-widths: "(max-width: 1199px)";
+
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
