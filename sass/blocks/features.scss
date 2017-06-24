@@ -9,10 +9,6 @@
     height: 277px;
     margin: 0 auto;
     width: 157px;
-
-    @media #{$retina} {
-      background-image: url("../img/iphone-screen-mobile@2x.png");
-    }
   }
 }
 
@@ -91,6 +87,12 @@
 }
 
 @media #{$max-tablet-widths} {
+  .features__container--device-preview::after {
+    @media #{$retina} {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
+  }
+
   .features__research {
     @include visually-hidden();
   }
@@ -191,6 +193,7 @@
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 10px;
+    max-width: 180px;
 
     b {
       font-weight: inherit;
@@ -337,10 +340,7 @@
   .features__research-title {
     line-height: 1;
     margin-bottom: 24px;
-
-    br {
-      display: none;
-    }
+    max-width: none;
   }
 
   .features__research-description {

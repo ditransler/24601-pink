@@ -47,7 +47,7 @@ gulp.task("html:update", ["html:copy"], function (done) {
 });
 
 gulp.task("style", function() {
-  gulp.src("sass/style.scss")
+  return gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -59,10 +59,10 @@ gulp.task("style", function() {
       })
     ]))
     .pipe(gulp.dest("build/css"))
-    .pipe(server.stream())
     .pipe(cssminify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("js:copy", function () {
@@ -105,7 +105,7 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("sass/**/*.{scss}", ["style"]);
+  gulp.watch("sass/**/*.{sass,scss}", ["style"]);
   gulp.watch("js/**/*.js", ["js"]);
   gulp.watch("*.html", ["html:update"]);
 });

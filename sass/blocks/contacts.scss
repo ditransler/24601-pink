@@ -86,9 +86,13 @@
   background: $secondary-bg-color url("../img/bg-map-mobile@1x.png") center center no-repeat;
   background-size: cover;
   min-height: 200px;
+}
 
-  @media #{$retina} {
-    background-image: url("../img/bg-map-mobile@2x.jpg");
+@media #{$max-tablet-widths} {
+  .contacts__map {
+    @media #{$retina} {
+      background-image: url("../img/bg-map-mobile@2x.jpg");
+    }
   }
 }
 
