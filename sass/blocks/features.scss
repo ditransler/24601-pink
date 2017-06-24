@@ -9,10 +9,6 @@
     height: 277px;
     margin: 0 auto;
     width: 157px;
-
-    @media #{$retina} {
-      background-image: url("../img/iphone-screen-mobile@2x.png");
-    }
   }
 }
 
@@ -91,6 +87,12 @@
 }
 
 @media #{$max-tablet-widths} {
+  .features__container--device-preview::after {
+    @media #{$retina} {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
+  }
+
   .features__research {
     @include visually-hidden();
   }
