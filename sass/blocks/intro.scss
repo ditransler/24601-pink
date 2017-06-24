@@ -15,11 +15,6 @@
   &--photo {
     padding-bottom: 83px;
   }
-
-  @media #{$retina} {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 700px auto;
-  }
 }
 
 .intro--index .intro__container::before {
@@ -30,10 +25,6 @@
   display: block;
   margin: 0 auto;
   width: 320px;
-
-  @media #{$retina} {
-    background-image: url("../img/iphone-hand-mobile@2x.png");
-  }
 }
 
 .intro__title {
@@ -47,6 +38,19 @@
 }
 
 @media #{$max-tablet-widths} {
+  .intro {
+    @media #{$retina} {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+      background-size: 700px auto;
+    }
+  }
+
+  .intro--index .intro__container::before {
+    @media #{$retina} {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+    }
+  }
+
   .intro__downloading-slogan {
     @include visually-hidden();
   }

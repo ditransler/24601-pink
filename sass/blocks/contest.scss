@@ -133,6 +133,10 @@
     border: 0;
   }
 
+  .contest__travel-achievements .contest__form-legend {
+    max-width: 240px;
+  }
+
   .contest__contacts .contest__form-legend {
     @include visually-hidden();
   }
@@ -169,10 +173,6 @@
   .contest__form-legend {
     padding-left: 25px;
     padding-right: 25px;
-
-    br {
-      display: none;
-    }
   }
 
   .contest__fullname {
