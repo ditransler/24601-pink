@@ -193,6 +193,7 @@
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 10px;
+    max-width: 180px;
 
     b {
       font-weight: inherit;
@@ -339,10 +340,7 @@
   .features__research-title {
     line-height: 1;
     margin-bottom: 24px;
-
-    br {
-      display: none;
-    }
+    max-width: none;
   }
 
   .features__research-description {
